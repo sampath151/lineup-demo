@@ -1,0 +1,13 @@
+<div class="dropdown">
+
+    <div (click)="toggle()" class="body">
+      <ng-content select="[body]"></ng-content>
+    </div>
+  
+    <div *ngIf="active" class="popup" >
+      <ng-content select="[popup]"></ng-content>
+    </div>
+  
+  </div>
+  
+  

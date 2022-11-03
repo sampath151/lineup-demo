@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146.945" height="270.111" viewBox="0 0 146.945 270.111">
+  <g id="Group_7259" data-name="Group 7259" transform="translate(0 123.17)">
+    <g id="Ellipse_32" data-name="Ellipse 32" transform="translate(39.376 38.31)" fill="none" stroke="#707070" stroke-width="2">
+      <circle cx="36" cy="36" r="36" stroke="none"/>
+      <circle cx="36" cy="36" r="35" fill="none"/>
+    </g>
+    <g id="Group_7255" data-name="Group 7255" transform="translate(73.468)">
+      <path id="Path_3030" data-name="Path 3030" d="M-16442.168-12454.962V-12603.3" transform="translate(16444.168 12480.127)" fill="none" stroke="#707070" stroke-width="2"/>
+      <path id="Path_3031" data-name="Path 3031" d="M-16442.168-12578.141v-25.164" transform="translate(16442.168 12725.082)" fill="none" stroke="#707070" stroke-width="2"/>
+    </g>
+    <g id="Group_7256" data-name="Group 7256" transform="translate(127.203 23.367) rotate(47)">
+      <path id="Path_3030-2" data-name="Path 3030" d="M0,25.163V0" transform="translate(0 0)" fill="none" stroke="#707070" stroke-width="2"/>
+      <path id="Path_3031-2" data-name="Path 3031" d="M0,25.163V0" transform="translate(0 121.781)" fill="none" stroke="#707070" stroke-width="2"/>
+    </g>
+    <g id="Group_7257" data-name="Group 7257" transform="translate(146.945 73.475) rotate(90)">
+      <path id="Path_3030-3" data-name="Path 3030" d="M0,25.165V0" transform="translate(0)" fill="none" stroke="#707070" stroke-width="2"/>
+      <path id="Path_3031-3" data-name="Path 3031" d="M0,25.165V0" transform="translate(0 121.78)" fill="none" stroke="#707070" stroke-width="2"/>
+    </g>
+    <g id="Group_7258" data-name="Group 7258" transform="translate(125.422 125.429) rotate(135)">
+      <path id="Path_3030-4" data-name="Path 3030" d="M0,25.165V0" transform="translate(0 0)" fill="none" stroke="#707070" stroke-width="2"/>
+      <path id="Path_3031-4" data-name="Path 3031" d="M0,25.165V0" transform="translate(0 121.781)" fill="none" stroke="#707070" stroke-width="2"/>
+    </g>
+    <path id="Subtraction_1" data-name="Subtraction 1" d="M45.995,20H12A22.552,22.552,0,0,1,17.116,5.841,15.553,15.553,0,0,1,29,0,15.553,15.553,0,0,1,40.884,5.841,22.553,22.553,0,0,1,45.995,20Z" transform="translate(46.472 24.31)" fill="#707070"/>
+  </g>
+</svg>

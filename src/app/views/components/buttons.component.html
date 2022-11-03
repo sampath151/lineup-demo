@@ -1,0 +1,1144 @@
+
+<div class="container-fluid">
+  <div>
+    <img src="assets/buttons-banner.png" style="width: 100%;height:auto;" alt="">
+  </div>
+  
+
+
+
+    <div class="card " style="height: auto">
+      <div class="col-md-12 mb-12 ">
+        <!-- Nav tabs -->
+        <tabset>
+          <tab heading="Example">
+            <div class="row" style="height: 70px;">
+               <div class="dropdown">
+                <button class="btn btn-defualt-outline dropdown-toggle"  type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-haspopup="true" aria-approveed="false">
+                  Select Button Type
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" (click)="onChange('stbBtn')" value="stbBtn">Standard Buttons</a>
+                  <a class="dropdown-item" (click)="onChange('actBtn')"  value="actBtn">Action Buttons</a>
+                  <!-- <a class="dropdown-item" (click)="onChange($event)" value="CMW">Conversational Model Window</a>
+                  <a class="dropdown-item" (click)="onChange($event)" value="MMW">Mobile Model Window</a> -->
+                </div>
+              </div> 
+              <!-- <div class="select w30" >
+                <select class="select-text select-dropdown" required formControlName="modelBoxDropdown" type="text" (change)="onChange($event)">
+                  <option value="stbBtn" selected>Standard Buttons</option>
+                <option value="actBtn">Action Buttons</option>
+                <span class="select-highlight"></span>
+                <span class="select-bar"></span>
+                <label class="select-label">Buttons type</label>
+                </select>
+                
+              </div> -->
+
+              <!-- old dropdown style -->
+              <!-- <div class="select w30" >
+                <select class="select-text select-dropdown" required formControlName="modelBoxDropdown" type="text" (change)="onChange($event)">
+                  
+                  <option value="stbBtn" selected>Standard Buttons</option>
+                  <option value="actBtn">Action Buttons</option>
+                </select>
+                <span class="select-highlight"></span>
+                <span class="select-bar"></span>
+                <label class="select-label">Model box Type</label>
+              </div> -->
+              <!-- old dropdown style close -->
+              
+              <!-- <select   formControlName="modelBoxDropdown" type="text" (change)="onChange($event)" >
+                <option value="DMW">Default Model Window</option>
+                <option value="FMW">Fluid Model Window</option>
+                <option value="CMW">Conversational Model Window</option>
+                <option value="MMW">Mobile Model Window</option>
+              </select>  -->
+            </div>
+            <div style="clear:both;"></div>
+
+            <!-- <div class="col-md-12 no-padding" *ngIf="selectedType =='predefined'">
+              <label>Application Name</label>
+              <input type="text" formControlName="applicationname" class="form-control" id="applicationname" placeholder="Application Name">
+              <span class="text-danger" *ngIf="form.controls['applicationname'].touched && form.controls['applicationname'].hasError('required')">
+                  Application Name is required! </span>
+            </div> 
+
+            <div class="col-md-12 no-padding" *ngIf="selectedType =='opentype'">
+              <label>Main Menu</label>
+              <input type="text"class="form-control" id="mainmenu" placeholder="Message Text">
+            </div> 
+             -->
+              
+            <div class="row component-tabs" *ngIf="selectedType =='stbBtn'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+
+                    <tab heading="Default" class=""> 
+                      <!-- <h3>Default Model Window</h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+                        
+                        <div class="card-body">
+                          <div class="row align-items-center">
+                            <!-- <div class="col-12 col-xl mb-3 mb-xl-0">
+                              Normal
+                            </div> -->
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-primary">Primary</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-outline-primary">secondary</button>
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-tertiary">tertiary</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-ghost">Ghost</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-link">Link</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-success">success</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-warning">Warning</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-danger">Danger</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-info">Info</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-light">Light</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-regular btn-dark">Dark</button>
+                            </div>
+                            
+                            
+
+                            
+                            <!-- <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-success">Success</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-success">Success</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-warning">Warning</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-danger">Danger</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-info">Info</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-light">Light</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-dark">Dark</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-link">Link</button>
+                            </div> -->
+                          </div>
+                          <!-- <div class="row align-items-center mt-3">
+                            <div class="col-12 col-xl mb-3 mb-xl-0">
+                              Active State
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-primary active" aria-pressed="true">Primary</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-secondary active" aria-pressed="true">Secondary</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-success active" aria-pressed="true">Success</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-warning active" aria-pressed="true">Warning</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-danger active" aria-pressed="true">Danger</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-info active" aria-pressed="true">Info</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-light active" aria-pressed="true">Light</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-dark active" aria-pressed="true">Dark</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-link active" aria-pressed="true">Link</button>
+                            </div>
+                          </div> -->
+                          <!-- <div class="row align-items-center mt-3">
+                            <div class="col-12 col-xl mb-3 mb-xl-0">
+                              Disabled
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-primary" disabled>Primary</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-secondary" disabled>Secondary</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-success" disabled>Success</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-warning" disabled>Warning</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-danger" disabled>Danger</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-info" disabled>Info</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-light" disabled>Light</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-dark" disabled>Dark</button>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-link" disabled>Link</button>
+                            </div>
+                          </div> -->
+                        </div>
+
+
+
+
+                        <!-- <div class="row align-items-center">
+                          <div class="col-12 col-xl mb-3 mb-xl-0">
+                          Normal
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-primary">Primary</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-secondary">Secondary</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-success">Success</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-warning">Warning</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-danger">Danger</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-info">Info</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-light">Light</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-dark">Dark</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0"></div>
+                      </div> -->
+                      <!-- <div class="row align-items-center mt-3">
+                        <div class="col-12 col-xl mb-3 mb-xl-0">
+                          Active State
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-primary active" aria-pressed="true">Primary</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-secondary active" aria-pressed="true">Secondary</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-success active" aria-pressed="true">Success</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-warning active" aria-pressed="true">Warning</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-danger active" aria-pressed="true">Danger</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-info active" aria-pressed="true">Info</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-light active" aria-pressed="true">Light</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-dark active" aria-pressed="true">Dark</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0"></div>
+                      </div> -->
+                      <!-- <div class="row align-items-center mt-3">
+                        <div class="col-12 col-xl mb-3 mb-xl-0">
+                          Disabled
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-primary" disabled>Primary</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-secondary" disabled>Secondary</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-success" disabled>Success</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-warning" disabled>Warning</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-danger" disabled>Danger</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-info" disabled>Info</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-light" disabled>Light</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <button type="button" class="btn btn-block btn-outline-dark" disabled>Dark</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0"></div>
+                      </div> -->
+
+
+
+                        
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_B_D"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                            
+                            <pre>
+                              <code [innerHTML]="css_code_B_D"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                       
+                      </div>
+                    </tab>
+                    <tab heading="Small" class=""> 
+                      <!-- <h3>Default Model Window</h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+
+                        <div class="card-body">
+                          <div class="row align-items-center">
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-small btn-primary">Primary</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn  btn-small btn-outline-primary">secondary</button>
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-small btn-tertiary">tertiary</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn  btn-small btn-ghost">Ghost</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn  btn-small btn-link">Link</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn  btn-small btn-success">success</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-small btn-warning">Warning</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn  btn-small btn-danger">Danger</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-small btn-info">Info</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-small btn-light">Light</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn  btn-small btn-dark">Dark</button>
+                            </div>
+                            
+                           
+                          </div>
+                         
+                        </div>
+                        
+                       
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_B_S"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_B_S"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    
+                    <tab heading="Large"> 
+                      <!-- <h3>Default Model Window 2 </h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+                        <div class="card-body">
+                          <div class="row align-items-center">
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-primary">Primary</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-outline-primary">secondary</button>
+                            </div>
+
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-tertiary">tertiary</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-ghost">Ghost</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-link">Link</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-success">success</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-warning">Warning</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-danger">Danger</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-info">Info</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-light">Light</button>
+                            </div>
+                            
+                            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                              <button type="button" class="btn btn-block btn-large btn-dark">Dark</button>
+                            </div>
+                            
+                           
+                          </div>
+                         
+                        </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_B_L"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_B_L"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Full Width"> 
+                      <!-- <h3>Default Model Window 3</h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+                        <div class="card-body">
+                          <div class="row align-items-center">
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-primary">Primary</button>
+                            </div>
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-outline-primary">secondary</button>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-tertiary">tertiary</button>
+                            </div>
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-ghost">Ghost</button>
+                            </div>
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-link">Link</button>
+                            </div>
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-success">success</button>
+                            </div>
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-warning">Warning</button>
+                            </div>
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-danger">Danger</button>
+                            </div>
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-info">Info</button>
+                            </div>
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-light">Light</button>
+                            </div>
+                            
+                            <div class="col-12 col-sm-12 col-md-12 ">
+                              <button type="button" class="btn btn-block btn-dark">Dark</button>
+                            </div>
+                            
+                           
+                          </div>
+                         
+                        </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_B_FW"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_B_FW"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="With Icon"> 
+                      <!-- <h3>Default Model Window 4</h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+                        <div class="row">
+                            
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block btn-regular btn-primary"> 
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg> &nbsp;
+                              Primary</button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block btn-regular btn-outline-primary">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              secondary</button>
+                          </div>
+
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block btn-regular btn-tertiary">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              tertiary</button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block  btn-regular btn-ghost">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              Ghost</button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block  btn-regular btn-link">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              Link</button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block  btn-regular btn-success">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              success</button>
+                          </div>
+                         
+                         
+                        </div>
+                        <div class="divider-50"></div>
+                        <div class="row ">
+                           
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block  btn-regular btn-warning">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              Warning</button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block  btn-regular btn-danger">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              Danger</button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block  btn-regular btn-info">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              Info</button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block  btn-regular btn-light">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              Light</button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block  btn-regular btn-dark">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              Dark</button>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_B_WI"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_B_WI"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Icon only"> 
+                      <!-- <h3>Default Model Window 4</h3> -->
+                      <div class="container component-view col-md-6 col-lg-9">
+                        <div class="row">
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn  btn-regular btn-primary"> 
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg> 
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-regular btn-outline-primary">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+  
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn  btn-regular btn-tertiary">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn  btn-regular btn-ghost">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-regular btn-link">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn  btn-regular btn-success">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+                         
+                            
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-regular btn-warning">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn   btn-regular btn-danger">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-regular btn-info">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-regular btn-light">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-block  btn-regular btn-dark">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              </button>
+                          </div>
+                          
+                         
+                        </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            
+                            <pre>
+                              <code [innerHTML]="html_code_B_OI"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_B_OI"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="row component-tabs" *ngIf="selectedType =='actBtn'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+                    <tab heading="actions"> 
+                      <!-- <h3>Fluid Model Window</h3> -->
+                      <div class="container component-view">
+                        <div class="row">
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn  btn-regular btn-action "> 
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg> 
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-regular btn-action">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#checked'" />
+                              </svg>
+                              </button>
+                          </div>
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn  btn-regular btn-action "> 
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg> 
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-regular btn-action">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#checked'" />
+                              </svg>
+                              </button>
+                          </div>
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn  btn-regular btn-action "> 
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg> 
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-regular btn-action">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#checked'" />
+                              </svg>
+                              </button>
+                          </div>
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn  btn-regular btn-action "> 
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg> 
+                              </button>
+                          </div>
+                          
+                          <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                            <button type="button" class="btn btn-regular btn-action">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#checked'" />
+                              </svg>
+                              </button>
+                          </div>
+                        </div>
+                        
+
+                         
+                         
+                         
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_AB_I"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_AB_I"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Toggle Switch"> 
+                      <!-- <h3>Fluid Model Window 2</h3> -->
+                      <div class="container component-view">
+                        
+
+                        <button type="button" class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                          <div class="handle"></div>
+                        </button>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_B_Toggle"></code>
+                            </pre>                              
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_B_Toggle"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    
+                    
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+           
+
+            
+          </tab>
+          <tab heading="Development">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>Buttons  Integration</h3>
+                  <!-- content from https://www.itsolutionstuff.com/post/angular-11-bootstrap-4-modal-exampleexample.html -->
+                  <h3>Angular 11 Bootstrap 4 Buttons </h3>
+
+                  <h5>Install Bootstrap 4</h5>
+                  
+                 <div class="codebox">
+                  <p>npm install bootstrap --save</p>
+                 </div>
+
+                 <p>Now, we need to include bootstrap css like "node_modules/bootstrap/dist/css/bootstrap.min.css", so let's add it on angular.json file.</p>
+
+                 <h5>angular.json</h5>
+                 <div class="codebox">
+                   <p>..... <br>
+                    "styles": [<br>
+                      "node_modules/bootstrap/dist/css/bootstrap.min.css",<br>
+                      "src/styles.css"<br>
+                    ],<br>
+                .....</p>
+                 </div>
+                 <h5> Install Ng Bootstrap</h5>
+                 <div class="codebox">
+                   <p>npm install --save @ng-bootstrap/ng-bootstrap</p>
+                 </div>
+
+                 <h5>Import Module</h5>
+                 <p>In this step, we need to import NgbModule to app.module.ts file. so let's import it as like bellow:</p>
+                 <h5>src/app/app.module.ts</h5>
+
+                 <div class="codebox">
+                  <pre>
+                    <code [innerHTML]="java_codeappModuleTs"></code>
+                  </pre>
+                   
+                 </div>
+                 <p>Now here, we will updated our html file. we will create simple bootstrap model template file. <br> <br>
+
+                  so let's put bellow code:</p>
+                  <h5>src/app/app.component.html</h5>
+
+                  <div class="codebox">
+                    <pre>
+                      <code [innerHTML]="html_code_B_Out"></code>
+                    </pre>
+                     
+                   </div>
+                 
+
+                </div>
+    
+                <div class="divider-50"></div>
+                
+              </div>
+    
+          </tab>
+         
+          <tab heading="Usage-Instructions">
+
+            <div class="row">
+              <div class="col-md-4">
+               <img src="assets/img/buttons/img-01.png" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="assets/img/buttons/img-02.png" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="assets/img/buttons/img-03.png" alt="">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-8">
+               <img src="assets/img/buttons/img-04.png" alt="">
+              </div>
+             
+              <div class="col-md-4">
+                <img src="assets/img/buttons/img-05.png" alt="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+               <img src="assets/img/buttons/img-06.png" alt="">
+              </div>
+              <div class="col-md-12">
+                <img src="assets/img/buttons/img-07.png" alt="">
+               </div>
+               <div class="col-md-12">
+                <img src="assets/img/buttons/img-08.png" alt="">
+               </div>
+               <div class="col-md-12">
+                <img src="assets/img/buttons/img-09.png" alt="">
+               </div>
+               <div class="col-md-12">
+                <img src="assets/img/buttons/img-10.png" alt="">
+               </div>
+            </div>
+
+
+           
+          </tab>
+        </tabset>
+      </div><!--/.col-->
+    </div>
+
+
+
+
+<div class="animated fadeIn">
+
+
+  
+  
+  </div>
+  
+  
+  </div>
+
+
+  

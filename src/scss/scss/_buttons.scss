@@ -1,0 +1,267 @@
+//button {
+//  @extend .btn;
+//}
+
+.btn-transparent {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    display: inline-block;
+    margin-top: -2px;
+    vertical-align: middle;
+  }
+}
+
+.btn-pill {
+  border-radius: 50em;
+}
+
+.btn-square {
+  border-radius: 0;
+}
+
+@each $color, $value in $theme-colors {
+  .btn-ghost-#{$color} {
+    @include button-ghost-variant($value);
+  }
+}
+
+
+
+
+.btn-defualt-outline{
+  background:#FFF;
+  border-color: #000;
+  color:000;
+  padding:10px;
+
+
+}
+
+
+.btn-regular{
+  padding:12px 20px!important;
+}
+
+.btn-small{
+  padding:5px 20px!important;
+}
+
+
+.btn-large{
+  padding:20px 20px!important;
+}
+
+.btn-action{
+  border:1px solid $gray-400;
+}
+
+
+
+  .btn-primary{
+    .icon{
+      fill: #FFF !important;
+    }
+    
+  }
+
+  .btn-primary:hover{
+    .icon{
+      fill: #FFF !important;
+    }
+    
+  }
+
+  .btn-outline-primary{
+    .icon{
+      fill: #133099 !important;
+    }
+  }
+  .btn-outline-primary:hover{
+    .icon{
+      fill:#FFF !important;
+    }
+  }
+  .btn-tertiary{
+    .icon{
+      fill: #000 !important;
+    }
+  }
+  .btn-ghost{
+    .icon{
+      fill: #000 !important;
+    }
+  }
+  .btn-link{
+    .icon{
+      fill: #000 !important;
+    }
+  }
+
+
+  .btn-success{
+    .icon{
+      fill: #FFF !important;
+    }
+  }
+
+
+  .btn-warning{
+    .icon{
+      fill: #000 !important;
+    }
+  }
+
+  .btn-danger{
+    .icon{
+      fill: #FFF !important;
+    }
+  }
+
+  .btn-info{
+    .icon{
+      fill: #000 !important;
+    }
+  }
+
+  .btn-light{
+    .icon{
+      fill: #000 !important;
+    }
+  }
+
+  .btn-dark{
+    .icon{
+      fill: #FFF !important;
+    }
+  }
+
+
+
+
+
+
+// // ------------- primary btn ------------- 
+
+// .btn-primarya{
+//   background:$primary;
+//   // background:#FF0;
+//   color:#FFF;
+//   height:50px;
+//   text-align: center;
+//   padding: 0 30px;
+
+// }
+
+// .btn-primarya:hover{
+//   // background:$primary;
+//   background:#B3D0FF;
+//   color:#000;
+// }
+
+// .btn-primarya:active{
+//   // background:$primary;
+//   background:$primary;
+//   color:rgb(255, 255, 255);
+  
+// }
+
+// .btn-primarya:focus{
+//   background:#175CE6;
+//   color:#FFF;
+// }
+
+
+
+// .btn-defualt-outline{
+//   background:#FFF;
+//   border-color: #000;
+//   color:000;
+//   padding:10px;
+
+
+// }
+
+// // ------------- Secondry btn ------------- 
+
+// .btn-secondry{
+//   background:none;
+//   border:1px solid $primary;
+//   // background:#FF0;
+//   color:$primary;
+//   height:50px;
+//   text-align: center;
+//   padding: 0 30px;
+
+// }
+
+// .btn-primarya:hover{
+//   // background:$primary;
+//   background:#B3D0FF;
+//   color:#000;
+// }
+
+// .btn-primarya:active{
+//   // background:$primary;
+  
+//   border:1px solid $primary;
+  
+//   color:$primary;
+//   color:rgb(255, 255, 255);
+  
+// }
+
+// .btn-primarya:focus{
+//   // background:#175CE6;
+//   border:1px solid #4DF0FF;
+//   color:#000;
+// }
+
+
+
+
+// // ------------- Secondry btn ------------- 
+
+// .btn-secondry{
+//   background:none;
+//   border:1px solid $primary;
+//   // background:#FF0;
+//   color:$primary;
+//   height:50px;
+//   text-align: center;
+//   padding: 0 30px;
+
+// }
+
+// .btn-primarya:hover{
+//   // background:$primary;
+//   background:#B3D0FF;
+//   color:#000;
+// }
+
+// .btn-primarya:active{
+//   // background:$primary;
+  
+//   border:1px solid $primary;
+  
+//   color:$primary;
+//   color:rgb(255, 255, 255);
+  
+// }
+
+// .btn-primarya:focus{
+//   // background:#175CE6;
+//   border:1px solid #4DF0FF;
+//   color:#000;
+// }
+
+
+
+
+
+

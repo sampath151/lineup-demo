@@ -1,0 +1,379 @@
+<!-- <div class="app flex-row align-items-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="clearfix">
+            <img src="assets/img/common/empty-icon.png" alt="404 error">
+            <h1 class="float-left display-3 mr-4">404</h1>
+            <h4 class="pt-3">Oops! Page Not found.</h4>
+            <p class="text-muted">The page you are looking for was not found.</p>
+          </div>
+          <div class="input-prepend input-group">
+            
+            
+            <span class="input-group-append">
+              <button type="button" routerLink="/"  class="btn btn-primary" data-dismiss="modal" >
+                Home
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+  <div>
+    <img src="assets/error-page-banner.png" style="width: 100%;height:auto;" alt="">
+  </div>
+
+<!-- <div class="row">
+  <div class="col-md-12 col-lg-12  element-body">
+    <div class="row internal-component-banner">
+      <div class="col-md-6 col-lg-6">
+    
+        <img src="assets/img/gif-imgs/breadcrumbs.gif" alt="breadcrumbs">
+    
+      </div>
+    
+      <div class="col-md-6 col-lg-6">
+        <div class="divider-50"></div>
+        
+        <h3>Breadcrumbs</h3>
+    <p>A breadcrumb or breadcrumb trail is a graphical control element frequently used as a navigational aid in user interfaces and on web pages. It allows users to keep track and maintain awareness of their locations within programs, documents, or websites</p>
+
+      </div>
+
+    </div>
+    </div>
+</div> -->
+
+
+
+
+<div class="card " style="height: auto">
+  <div class="col-md-12 mb-12 ">
+    <!-- Nav tabs -->
+    <tabset>
+      <tab heading="Example">
+        <!-- <div class="row" style="height: 70px;">
+           <div class="dropdown">
+            <button class="btn btn-defualt-outline dropdown-toggle"  type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-haspopup="true" aria-approveed="false">
+              Select Accordion Type
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" (click)="onChange('RA')" >Regulalr Accourdion</a>
+              <a class="dropdown-item" (click)="onChange('DTA')" >Data table Accourdion</a>
+            </div>
+          </div> 
+        </div> -->
+        <div style="clear:both;"></div>
+
+          
+        <div class="row component-tabs" >
+          <div class="component-area-bg">
+            <div class="row">
+              <tabset>
+
+                <tab heading="Default" class=""> 
+                  <!-- <h3>Default Model Window</h3> -->
+                  <div class="container component-view col-md-12 col-lg-12">
+                    
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                            <div class="card-body">
+                              <div class="row align-items-center">
+                               
+                      
+                                <div class="col-md-6" style="margin:auto auto">
+                                  <div class="row">
+                                    <div class="col-md-9">
+                                     <h4>Oops! Page Not Found - 404</h4>
+                                     <p>The page you were trying to reach could not be found. This could be because</p>
+                                     <ul>
+                                       <li>The page does not exist.</li>
+                                       <li>The page exists, but you do not have permission to view it.</li>
+                                     </ul>
+                                     <p>Please visit our Help Center for help</p>
+                                     <button class="btn btn-primary">action</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <img src="assets/img/common/error-page-icon.png" style="width:100%; height:auto" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                               
+                              
+                            </div>
+                          </div>
+                      </div>
+                      
+                    </div>
+
+
+                    
+                  </div>
+
+                  <div class="fotter">
+                    <tabset>
+                      <tab heading="HTML"> 
+                        <div class="more-arrow">
+                          <div class="container">
+                            <div class="chevron"></div>
+                            <div class="chevron"></div>
+                            <div class="chevron"></div>
+                          </div>
+                        </div>
+                        <pre>
+                          <code [innerHTML]="html_code_Err"></code>
+                        </pre>  
+                      </tab>
+                      <tab heading="SCSS"> 
+                        
+                        
+                        <pre>
+                          <code [innerHTML]="css_code_Err"></code>
+                        </pre>
+                      </tab>
+                      <!-- <tab heading="Integration"> 
+                        <pre>
+                          <code [innerHTML]="java_codeappModuleTs"></code>
+                        </pre>
+                      </tab> -->
+                     </tabset>
+                   
+                  </div>
+                </tab>
+                
+                
+              
+                
+                
+              
+               </tabset>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row component-tabs" *ngIf="selectedType =='DTA'">
+          <div class="component-area-bg">
+            <div class="row">
+              <tabset>
+                <tab heading="Data Table Accordion"> 
+                  <!-- <h3>Fluid Model Window</h3> -->
+                  <div class="container component-view">
+                    <div class="row">
+                      
+                        
+<div class="">
+<div class="row">
+<div class="col-lg-12 hedding pb-2">
+  <h1> Table Row Toggel </h1>
+</div>
+<div class="col-lg-12">
+  <table class="table " style="border-collapse:collapse;">
+      <thead>
+          <tr>
+              <th>No.</th>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Credit</th>
+              <th>Debit</th>
+              <th>Balance</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr colspan="6" data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+              <td>1</td>
+              <td>12 Jan 2018</td>
+              <td>Good</td>
+              <td>$150.00</td>
+              <td> - </td>
+              <td>$150.00</td>
+          </tr>
+          <tr class="p">
+              <td colspan="6" class="hiddenRow">
+                <div class="accordian-body collapse p-3" id="demo1">
+                  <p>No : <span>1</span></p>
+                  <p>Date : <span>12 Jan 2018</span> </p>
+                  <p>Description : <span>Good</span> </p>
+                  <p>Credit : <span>$150.00</span> </p>
+                  <p>Debit : <span></span></p>
+                  <p>Balance : <span>$150.00</span></p>
+              </div> 
+            </td> 
+          </tr>
+          <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
+              <td>2</td>
+              <td>12 Jan 2018</td>
+              <td>Good</td>
+              <td>$11.00</td>
+              <td> - </td>
+              <td>$161.00</td>
+          </tr>
+          <tr>
+              <td colspan="6" class="hiddenRow">
+                <div id="demo2" class="accordian-body collapse p-3">
+                  <p>No : <span>2</span></p>
+                  <p>Date : <span>12 Jan 2018</span> </p>
+                  <p>Description : <span>Good</span> </p>
+                  <p>Credit : <span>$150.00</span> </p>
+                  <p>Debit : <span></span></p>
+                  <p>Balance : <span>$150.00</span></p>
+                </div>
+              </td>
+          </tr>
+      
+          <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle">
+              <td>3</td>
+              <td>12 Jan 2018</td>
+              <td>Good</td>
+              <td>$500.00</td>
+              <td> - </td>
+              <td>$661.00</td>
+          </tr>
+          <tr>
+              <td colspan="6"  class="hiddenRow">
+                <div id="demo3" class="accordian-body collapse p-3">
+                  <p>No : <span>3</span></p>
+                  <p>Date : <span>12 Jan 2018</span> </p>
+                  <p>Description : <span>Good</span> </p>
+                  <p>Credit : <span>$150.00</span> </p>
+                  <p>Debit : <span></span></p>
+                  <p>Balance : <span>$150.00</span></p>
+                </div>
+              </td>
+          </tr>
+
+          <tr data-toggle="collapse" data-target="#demo4" class="accordion-toggle">
+              <td>4</td>
+              <td>12 Jan 2018</td>
+              <td>Good</td>
+              <td>$500.00</td>
+              <td> - </td>
+              <td>$661.00</td>
+          </tr>
+          <tr>
+              <td colspan="6"  class="hiddenRow">
+                <div id="demo4" class="accordian-body collapse p-3">
+                  <p>No : <span>4</span></p>
+                  <p>Date : <span>12 Jan 2018</span> </p>
+                  <p>Description : <span>Good</span> </p>
+                  <p>Credit : <span>$150.00</span> </p>
+                  <p>Debit : <span></span></p>
+                  <p>Balance : <span>$150.00</span></p>
+                </div>
+              </td>
+          </tr>
+
+          <tr data-toggle="collapse" data-target="#demo5" class="accordion-toggle">
+              <td>5</td>
+              <td>12 Jan 2018</td>
+              <td>Good</td>
+              <td>$500.00</td>
+              <td> - </td>
+              <td>$661.00</td>
+          </tr>
+          <tr>
+              <td colspan="6"  class="hiddenRow">
+                <div id="demo5" class="accordian-body collapse p-3">
+                  <p>No : <span>5</span></p>
+                  <p>Date : <span>12 Jan 2018</span> </p>
+                  <p>Description : <span>Good</span> </p>
+                  <p>Credit : <span>$150.00</span> </p>
+                  <p>Debit : <span></span></p>
+                  <p>Balance : <span>$150.00</span></p>
+                </div>
+              </td>
+          </tr>   
+      </tbody>
+  </table>
+  
+
+
+</div>
+</div>
+</div>
+
+                    </div>
+                     
+                     
+                  </div>
+
+                  <div class="fotter">
+                    <tabset>
+                      <tab heading="HTML"> 
+                        <div class="more-arrow">
+                          <div class="container">
+                            <div class="chevron"></div>
+                            <div class="chevron"></div>
+                            <div class="chevron"></div>
+                          </div>
+                        </div>
+                        <pre>
+                          <code [innerHTML]="html_code_AB_I"></code>
+                        </pre>  
+                      </tab>
+                      <tab heading="SCSS"> 
+                        
+                       
+                        <pre>
+                          <code [innerHTML]="css_code_AB_I"></code>
+                        </pre>
+                      </tab>
+                      <!-- <tab heading="Integration"> 
+                        <pre>
+                          <code [innerHTML]="java_codeappModuleTs"></code>
+                        </pre>
+                      </tab> -->
+                     </tabset>
+                  </div>
+                </tab>
+                
+                
+                
+               </tabset>
+            </div>
+
+          </div>
+
+        </div>
+       
+
+        
+      </tab>
+      
+     
+      <tab heading="Usage-Instructions">
+
+        <div class="row">
+          <div class="col-md-12">
+           <img src="assets/img/error-page/img01.png" alt="">
+           <img src="assets/img/error-page/img02.png" alt="">
+          </div>
+       
+         
+        </div>
+
+
+       
+
+       
+      </tab>
+    </tabset>
+  </div><!--/.col-->
+</div>
+
+
+
+  </div>

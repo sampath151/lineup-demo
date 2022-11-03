@@ -1,0 +1,51 @@
+
+
+.tickets-list{
+    width:100%;
+    background: #F7F7F7;
+    margin: 2px 0;
+    .ticket-item{ 
+        height:70px;
+        width:100%;
+        padding:5px;
+        .user-letter{
+            width: 20%;
+            height: 100%;
+            float: left;
+            padding: 4%;
+            .letter-icon{
+                font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    background: #FDCC;
+    border-radius: 23px;
+    width: 48px;
+    height: 48px;
+    padding: 10px 17px;
+    margin: 2% auto;
+            }
+        }
+        .user-details{
+            width:60%;
+            float:left;
+            line-height: 20px;
+        }
+        .time{
+            width:20%;
+            float:left;
+            text-align:bottom;
+        }
+    }
+
+}
+
+
+
+// -----------------body--area
+
+
+.ticket-body{
+    .header{ height:120px; width:100%; background:#FCC;}
+    .user-reply{ height:320px; width:100%; background:#F9F9F9}
+    .support-comment{ height:230px; width:100%; background:#4DD}
+}

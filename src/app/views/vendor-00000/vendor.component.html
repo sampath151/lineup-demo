@@ -1,0 +1,220 @@
+<!-- <div>
+  <img src="assets/installation-banner.png" style="width: 100%;height:auto;" alt="">
+</div> -->
+
+
+
+<div class="container-fluid">
+
+
+<div class="row">
+
+    <div class="element-body col-lg-12">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-lg-6">
+          <div class="material-textfield">
+            <input  placeholder="Search... Vendor through Name and location, vendor ID" type="text" style="width:80%;" /> <svg class="icon"><use xlink:href="#search" /></svg>
+            
+          </div>
+         
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6">
+          <div class="material-textfield">
+            <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+              <button  routerLink="/vendor/addvendor" type="button" class="btn btn-regular btn-primary float-right">Add Vendor</button>
+              </div>
+          </div>
+        </div>
+      
+    </div> 
+
+    <div class="row">
+      
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID No </th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Location</th>
+        <th>City</th>
+        <th>status</th>
+        <th>Reg Date</th>
+        <th>rating</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#VDR231213</td>
+        <td>Ganesh General Store</td>
+        <td>Grocery</td>
+        <td>Malkajgiri</td>
+        <td>Hyderabad</td>
+        <td>
+          <span class="badge badge-success">Active</span>
+        </td>
+        
+        <td>01/06/2021</td>
+        <td>3.2/5</td>
+        
+        <td>
+          <button>View</button>
+          <button>edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>#VDR2341213</td>
+        <td>Ganesh General Store</td>
+        <td>Grocery</td>
+        <td>Malkajgiri</td>
+        <td>Hyderabad</td>
+        <td>
+          <span class="badge badge-secondary">Inactive</span>
+        </td>
+        
+        <td>01/06/2021</td>
+        <td>3/5</td>
+        <td>
+          <button>View</button>
+          <button>edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>#VDR3242313</td>
+        <td>Feroz Bike Mechanic</td>
+        <td>Mechanic</td>
+        <td>Malkajgiri</td>
+        <td>Hyderabad</td>
+        <td>
+          <span class="badge badge-success">Active</span>
+        </td>
+        
+        <td>01/06/2021</td>
+        <td>4.2/5</td>
+        
+        <td>
+          <button>View</button>
+          <button>edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>#VDR3242313</td>
+        <td>Karan Water Service</td>
+        <td>Water Supply</td>
+        <td>Malkajgiri</td>
+        <td>Hyderabad</td>
+        <td>
+          <span class="badge badge-danger">Banned</span>
+        </td>
+        
+        <td>2012/01/01</td>
+        <td>Member</td>
+        
+        <td>
+          <button>View</button>
+          <button>edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>#VDR4242313</td>
+        <td>Maha Laxmi Medicals</td>
+        <td>Pharmacy</td>
+        <td>Malkajgiri</td>
+        <td>Hyderabad</td>
+        <td>
+          <span class="badge badge-success">Active</span>
+        </td>
+        
+        <td>01/06/2021</td>
+        <td>4.2/5</td>
+        
+        <td>
+          <button>View</button>
+          <button>edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>#VDR5242313</td>
+        <td>Pradeep Medicals</td>
+        <td>Pharmacy</td>
+        <td>Malkajgiri</td>
+        <td>Hyderabad</td>
+        <td>
+          <span class="badge badge-danger">Banned</span>
+        </td>
+        
+        <td>01/06/2021</td>
+        <td>3.8/5</td>
+        
+        <td>
+          <button>View</button>
+          <button>edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>#VDR5242313</td>
+        <td>Krupa Medicals</td>
+        <td>Pharmacy</td>
+        <td>Malkajgiri</td>
+        <td>Hyderabad</td>
+        <td>
+          <span class="badge badge-success">Active</span>
+        </td>
+        
+        <td>01/06/2021</td>
+        <td>3.8/5</td>
+        
+        <td>
+          <button>View</button>
+          <button>edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>#VDR4242313</td>
+        <td>Dolphin Biryani House</td>
+        <td>Restaurant</td>
+        <td>Malkajgiri</td>
+        <td>Hyderabad</td>
+        <td>
+          <span class="badge badge-success">Active</span>
+        </td>
+        
+        <td>01/06/2021</td>
+        <td>4/5</td>
+        
+        <td>
+          <button>View</button>
+          <button>edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+
+    </div>
+  </div>
+  
+
+
+
+</div> 
+
+</div>

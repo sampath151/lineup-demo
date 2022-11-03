@@ -1,0 +1,199 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  // padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  // padding: 1.6rem 2rem 0.6rem;
+  padding:0.6rem 1rem 0.6rem;
+  z-index: 1000;
+  top:55px;
+  // margin-bottom: $breadcrumb-margin-bottom;
+  margin-bottom: 0rem;
+  list-style: none;
+  // background-color: $breadcrumb-bg;  
+  @include border-radius($breadcrumb-border-radius);
+  font-weight: 400;
+  background:#EAEEF2;
+  width:100%;
+
+
+  a{
+    // color: rgb(99, 96, 96);
+
+  color: $primary;
+  }
+}
+
+
+.dark-mode {
+  .breadcrumb {
+  background:#000;
+  }
+
+
+
+
+.breadcrumb-item {
+  // The separator between breadcrumbs (by default, a forward-slash: "/")
+  + .breadcrumb-item {
+    padding-left: $breadcrumb-item-padding;
+    background: url(assets/Icons/common/arrow-icon.svg) no-repeat;
+    padding-left: 20px;
+    margin-left: 10px;
+    background-position: 2px;
+    
+
+    &::before {
+      display: inline-block; // Suppress underlining of the separator in modern browsers
+      padding-right: $breadcrumb-item-padding;
+      color: $breadcrumb-divider-color;
+
+  width:30px;
+  height:30px;
+  background:url('assets/Icons/common/arrow-icon.svg') no-repeat;
+      // content: $breadcrumb-divider;
+    }
+  }
+
+  // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+  // without `<ul>`s. The `::before` pseudo-element generates an element
+  // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+  //
+  // To trick IE into suppressing the underline, we give the pseudo-element an
+  // underline and then immediately remove it.
+  + .breadcrumb-item:hover::before {
+    text-decoration: underline;
+  }
+  // stylelint-disable-next-line no-duplicate-selectors
+  + .breadcrumb-item:hover::before {
+    text-decoration: none;
+  }
+
+  &.active {
+    // color: $breadcrumb-active-color;
+    // color: $primary;
+    color: #dadada;
+    font-weight: bold;
+    background: url(assets/Icons/common/arrow-icon-light.svg) no-repeat;
+    padding-left: 20px;
+    margin-left: 10px;
+    background-position: 2px;
+  }
+}
+
+.breadcrumb a{
+  color: $primary;
+}
+
+}
+
+
+
+
+
+.breadcrumb-item {
+  // The separator between breadcrumbs (by default, a forward-slash: "/")
+  + .breadcrumb-item {
+    padding-left: $breadcrumb-item-padding;
+    background: url(assets/Icons/common/arrow-icon.svg) no-repeat;
+    padding-left: 20px;
+    margin-left: 10px;
+    background-position: 2px;
+    
+
+    &::before {
+      display: inline-block; // Suppress underlining of the separator in modern browsers
+      padding-right: $breadcrumb-item-padding;
+      color: $breadcrumb-divider-color;
+
+  width:30px;
+  height:30px;
+  background:url('assets/Icons/common/arrow-icon.svg') no-repeat;
+      // content: $breadcrumb-divider;
+    }
+  }
+
+  // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+  // without `<ul>`s. The `::before` pseudo-element generates an element
+  // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+  //
+  // To trick IE into suppressing the underline, we give the pseudo-element an
+  // underline and then immediately remove it.
+  + .breadcrumb-item:hover::before {
+    text-decoration: underline;
+  }
+  // stylelint-disable-next-line no-duplicate-selectors
+  + .breadcrumb-item:hover::before {
+    text-decoration: none;
+  }
+
+  &.active {
+    // color: $breadcrumb-active-color;
+    // color: $primary;
+    color: #000;
+    // font-weight: bold;
+    background: url(assets/Icons/common/arrow-icon.svg) no-repeat;
+    padding-left: 20px;
+    margin-left: 10px;
+    background-position: 2px;
+  }
+}
+
+
+
+
+// ul.breadcrumb {
+//   padding: 10px 16px;
+//   list-style: none;
+//   // background-color: rgb(252, 252, 252);
+// }
+// + .breadcrumb-item {
+//   padding-left: $breadcrumb-item-padding;
+//   background: url(/assets/Icons/common/arrow-icon.svg) no-repeat;
+//   padding-left: 20px;
+//   margin-left: 10px;
+//   background-position: 2px;
+// }
+  
+// ul.breadcrumb li+li:before {
+//   padding: 8px;
+//   color: black;
+//   // content: ">";
+//   // width:30px;
+//   // height:30px;
+//   // background:url('/assets/Icons/common/arrow-icon.svg') no-repeat;
+// }
+// ul.breadcrumb li a {
+//   color: #183955;
+//   text-decoration: none;
+//   background: url(/assets/Icons/common/arrow-icon.svg) no-repeat;
+//   padding-left: 20px;
+//   margin-left: 10px;
+//   background-position: 2px;
+// }
+// ul.breadcrumb li a:hover {
+//   color: #060e16;
+//   text-decoration: underline;
+// }
+
+
+// .breadcrumb{
+
+
+//   ul.breadcrumb li+li:before{
+//     background: url(/assets/Icons/common/arrow-icon.svg) no-repeat;
+//     padding-left: 20px;
+//     margin-left: 10px;
+//     background-position: 2px;
+
+//   }
+//   li{
+
+//   }
+//   li.active{
+//     background: url(/assets/Icons/common/arrow-icon.svg) no-repeat;
+//     padding-left: 20px;
+//     margin-left: 10px;
+//     background-position: 2px;
+//   }
+  
+// }

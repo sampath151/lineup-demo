@@ -1,0 +1,347 @@
+
+.accordion{
+    width:100%;
+    border:1px solid #ececec;
+    a{text-decoration: none;}
+    .header{
+        padding:15px;
+        background:#f7f7f7;
+        color:#000;
+    }
+    .body{
+        padding:25px 15px 15px;
+    }
+    .btn-link{
+      text-align: left;
+      text-decoration: none;
+      font-weight: 300;
+      color:#212121;
+    }
+    .card-header{
+      padding:0.25rem 10px;
+      background: #f9f9f9;
+      border-top:1px solid #ececec;
+      border-bottom: 1px solid #ececec;
+    }
+}
+
+
+
+
+.table tr {
+    cursor: pointer;
+}
+.table{
+	background-color: #fff !important;
+}
+.hedding h1{
+	color:#fff;
+	font-size:25px;
+}
+.main-section{
+	margin-top: 120px;
+}
+.hiddenRow {
+    padding: 0 4px !important;
+    background-color: #eeeeee;
+    font-size: 13px;
+}
+.accordian-body span{
+	color:#a2a2a2 !important;
+}
+
+
+
+.bs-example{
+  margin: 20px;
+  width:100%;
+}
+.accordion svg{
+  // margin-right: 0.5rem;
+  // float: right;;
+  position: absolute;
+  right:10px;
+}
+
+.accordian-content-area{
+  background:#FFF;
+}
+
+
+
+
+
+.dark-mode{
+
+.accordion{
+  width:100%;
+  border:1px solid #585555;
+  a{text-decoration: none;}
+  .header{
+      padding:15px;
+      background:#353535;
+      color:#FFF;
+  }
+  .body{
+      padding:25px 15px 15px;
+      background: #292929!important;
+  }
+  .btn-link{
+    text-align: left;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffff;
+  }
+  .card-header{
+    padding: 0.25rem 10px;
+    background: #4a4a4a;
+    border-top: 1px solid #585555;
+    border-bottom: 1px solid #585555;
+  }
+}
+
+
+
+
+.table tr {
+  cursor: pointer;
+}
+.table{
+background-color: #fff !important;
+}
+.hedding h1{
+color:#fff;
+font-size:25px;
+}
+.main-section{
+margin-top: 120px;
+}
+.hiddenRow {
+  padding: 0 4px !important;
+  background-color: #eeeeee;
+  font-size: 13px;
+}
+.accordian-body span{
+color:#a2a2a2 !important;
+}
+
+
+
+.bs-example{
+margin: 20px;
+width:100%;
+}
+.accordion svg{
+// margin-right: 0.5rem;
+// float: right;;
+position: absolute;
+right:10px;
+}
+
+.accordian-content-area{
+background:#313131;
+}
+
+
+.dark-mode .icon{
+  width: 22px;
+    height: 22px;
+    padding: 2px;
+    display: inline-block;
+    // fill: #c5c5c5;
+    fill: #d6d6d6!important;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: 0 0;
+    text-align: center;
+}
+
+}
+
+// $accordion-padding-y:                     1rem;
+// $accordion-padding-x:                     1.25rem;
+// $accordion-color:                         $body-color;
+// $accordion-bg:                            $body-bg;
+// $accordion-border-width:                  $border-width;
+// $accordion-border-color:                  rgba($black, .125);
+// $accordion-border-radius:                 $border-radius;
+// $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
+
+// $accordion-body-padding-y:                $accordion-padding-y;
+// $accordion-body-padding-x:                $accordion-padding-x;
+
+// $accordion-button-padding-y:              $accordion-padding-y;
+// $accordion-button-padding-x:              $accordion-padding-x;
+// $accordion-button-color:                  $accordion-color;
+// $accordion-button-bg:                     $accordion-bg;
+// $accordion-transition:                    $btn-transition, border-radius .15s ease;
+// $accordion-button-active-bg:              tint-color($component-active-bg, 90%);
+// $accordion-button-active-color:           shade-color($primary, 10%);
+
+// $accordion-button-focus-border-color:     $input-focus-border-color;
+// $accordion-button-focus-box-shadow:       $btn-focus-box-shadow;
+
+// $accordion-icon-width:                    1.25rem;
+// $accordion-icon-color:                    $accordion-color;
+// $accordion-icon-active-color:             $accordion-button-active-color;
+// $accordion-icon-transition:               transform .2s ease-in-out;
+// $accordion-icon-transform:                rotate(-180deg);
+
+// $accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+// $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+
+
+
+
+
+
+
+/* -----------------> can start accordion style copy from here ------------------------*/
+
+.accordion-started.accordion-bral {
+  min-height: 0;
+  min-width: 220px;
+  width: 100%;
+  background-color: #FFF;
+  margin: 0px!important;
+  color: #484848;
+}
+.accordion-started.accordion-bral img {
+    width: 100%;
+    height: 100%;
+}
+.accordion-started.accordion-bral .ac-label {
+  font-family: Arial, sans-serif;
+  padding: 5px 20px;
+  position: relative;
+  display: block;
+  height: auto;
+  cursor: pointer;
+  color: #137AAA;
+  border: 1px solid #95e5d4;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  line-height: 33px;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.accordion-started.accordion-bral .ac-label:hover {
+  
+}
+.accordion-started.accordion-bral input + .ac-label  {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.accordion-started.accordion-bral input:checked + .ac-label,
+.accordion-started.accordion-bral input:checked + .ac-label:active {
+  
+}
+.accordion-started.accordion-bral input.ac-input {
+  display: none;
+}
+.accordion-started.accordion-bral .article {
+  overflow: hidden;
+  height: 0px;
+  max-height: auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.accordion-started.accordion-bral .article p {
+  line-height: 23px;
+  padding-left: 5px;
+}
+.accordion-started.accordion-bral input:checked ~ .article i {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.accordion-started.accordion-bral input:checked ~ .article.ac-content {
+  height: auto;
+}
+
+.accordion-started.accordion-bral i {
+  position: absolute;
+  transform: translate(-30px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+.accordion-started.accordion-bral input:checked ~ .ac-label i:before {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.accordion-started.accordion-bral input:checked ~ .ac-label i:after {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion-started.accordion-bral i:before, .accordion-bral i:after {
+  content: "";
+  position: absolute;
+  background-color: #173B6B;
+  width: 3px;
+  height: 9px;
+}
+.accordion-started.accordion-bral i:before {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+.accordion-started.accordion-bral i:after {
+  transform: translate(2px, 0) rotate(45deg);
+}
+
+.accordion-started ul.ac-list {
+  padding-left: 40px;
+  list-style-type: disc;  
+}
+
+
+/* ---------- accordion style end --------------------------------------- */
+
+
+
+
+.width-100{
+  width:100%;
+}
+.panel-heading {
+  padding: 0;
+	border:0;
+}
+.panel-title>a, .panel-title>a:active{
+	display:block;
+	padding:15px;
+  color:#000;
+  font-size:14px;
+  font-weight:200;
+  background:#f9f9f9;
+	text-transform:uppercase;
+	letter-spacing:1px;
+  word-spacing:3px;
+	text-decoration:none;
+}
+.panel-body{
+  padding:10px;
+  background:#FFF;
+}
+.panel-heading  a:before {
+   font-family: 'Glyphicons Halflings';
+   content: "";
+   height: 20px;
+   width: 20px;
+   background: url(assets/Icons/common/down-arrow.png) no-repeat;
+   float: right;
+   transition: all 0.5s;
+}
+.panel-heading a:before {
+	// background: rotate(180deg);
+  // transform: rotate(180deg);
+	// -moz-transform: rotate(180deg);
+	// transform: rotate(180deg);
+} 
+

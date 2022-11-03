@@ -1,0 +1,1476 @@
+
+<div class="container-fluid">
+  <div>
+    <img src="assets/model-windows-banner.png" style="width: 100%;height:auto;" alt="">
+  </div>
+
+
+
+    <div class="card " style="height: auto">
+      <div class="col-md-12 mb-12 ">
+        <!-- Nav tabs -->
+        <tabset>
+          <tab heading="Example">
+            <div class="row" style="height: 70px;">
+               <!-- <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select Type
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" value="DMW">Default Model Window</a>
+                  <a class="dropdown-item" value="FMW">Fluid Model Window</a>
+                  <a class="dropdown-item" value="CMW">Conversational Model Window</a>
+                  <a class="dropdown-item" value="MMW">Mobile Model Window</a>
+                </div>
+              </div>  -->
+              <div class=" w30" >
+                <div class="dropdown">
+                  <button class="btn btn-defualt-outline dropdown-toggle"  type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-haspopup="true" aria-approveed="false">
+                    Select Model Box Type
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" (click)="onChange('DMW')" value="stbBtn">Default Model Window</a>
+                    <a class="dropdown-item" (click)="onChange('FMW')"  value="actBtn">Fluid Model Window</a>
+                    <a class="dropdown-item" (click)="onChange('CMW')" value="stbBtn">Conversational Model Window</a>
+                    <a class="dropdown-item" (click)="onChange('MMW')"  value="actBtn">Mobile Model Window</a>
+                  </div>
+                </div> 
+
+                <!-- old dropdown style -->
+                <!-- <select class="select-text select-dropdown" required formControlName="modelBoxDropdown" type="text" (change)="onChange($event)">
+                  
+                  <option value="DMW" selected>Default Model Window</option>
+                <option value="FMW">Fluid Model Window</option>
+                <option value="CMW">Conversational Model Window</option>
+                <option value="MMW">Mobile Model Window</option>
+                </select>
+                <span class="select-highlight"></span>
+                <span class="select-bar"></span>
+                <label class="select-label">Model box Type</label> -->
+
+              <!-- old dropdown style close -->
+              </div>
+              
+              <!-- <select   formControlName="modelBoxDropdown" type="text" (change)="onChange($event)" >
+                <option value="DMW">Default Model Window</option>
+                <option value="FMW">Fluid Model Window</option>
+                <option value="CMW">Conversational Model Window</option>
+                <option value="MMW">Mobile Model Window</option>
+              </select>  -->
+            </div>
+            <div style="clear:both;"></div>
+
+            <!-- <div class="col-md-12 no-padding" *ngIf="selectedType =='predefined'">
+              <label>Application Name</label>
+              <input type="text" formControlName="applicationname" class="form-control" id="applicationname" placeholder="Application Name">
+              <span class="text-danger" *ngIf="form.controls['applicationname'].touched && form.controls['applicationname'].hasError('required')">
+                  Application Name is required! </span>
+            </div> 
+
+            <div class="col-md-12 no-padding" *ngIf="selectedType =='opentype'">
+              <label>Main Menu</label>
+              <input type="text"class="form-control" id="mainmenu" placeholder="Message Text">
+            </div> 
+             -->
+              
+            <div class="row component-tabs" *ngIf="selectedType =='DMW'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+                    <tab heading="Small" class=""> 
+                      <!-- <h3>Default Model Window</h3> -->
+                      <div class="container component-view col-md-6 col-lg-3">
+                        
+                        <div class="modal-content ">
+        
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                           <h3 class="modal-title">Heading Title</h3>
+                           <button type="button" class="close" data-dismiss="modal">
+                            <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                           </button>
+                         </div>
+                         
+                         <!-- Modal body -->
+                         <div class="modal-body">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                         </div>
+                         
+                         <!-- Modal footer -->
+                         <div class="modal-footer">
+                           <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                           <button type="button" class="btn btn-light" data-dismiss="modal" >
+                             Cancel
+                           </button>
+                           <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                             Submit
+                           </button>
+                         </div>
+                           
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <!-- <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div> -->
+                            <pre>
+                              <code [outerHTML]="html_code"></code>
+                            </pre>                            
+                          </tab>
+                          <tab heading="SCSS">  
+                            <pre>
+                              <code [innerHTML]="css_code"></code>
+                            </pre>
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    
+                    <tab heading="Medium"> 
+                      <!-- <h3>Default Model Window 2 </h3> -->
+                      <div class="container component-view col-md-6 col-lg-4">
+                        <div class="modal-content ">
+        
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                           <h3 class="modal-title">Heading Title</h3>
+                           <button type="button" class="close" data-dismiss="modal">
+                            <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                           </button>
+                         </div>
+                         
+                         <!-- Modal body -->
+                         <div class="modal-body">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                         </div>
+                         
+                         <!-- Modal footer -->
+                         <div class="modal-footer">
+                           <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                           <button type="button" class="btn btn-light" data-dismiss="modal" >
+                             Cancel
+                           </button>
+                           <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                             Submit
+                           </button>
+                         </div>
+                           
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            
+                            <pre>
+                              <code [innerHTML]="html_code_M"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                            <pre>
+                              <code [innerHTML]="css_code"></code>
+                            </pre>
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="large"> 
+                      <!-- <h3>Default Model Window 3</h3> -->
+                      <div class="container component-view col-md-6 col-lg-6">
+                        <div class="modal-content ">
+        
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                           <h3 class="modal-title">Heading Title</h3>
+                           <button type="button" class="close" data-dismiss="modal">
+                            <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                           </button>
+                         </div>
+                         
+                         <!-- Modal body -->
+                         <div class="modal-body">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                         </div>
+                         
+                         <!-- Modal footer -->
+                         <div class="modal-footer">
+                           <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                           <button type="button" class="btn btn-light" data-dismiss="modal" >
+                             Cancel
+                           </button>
+                           <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                             Submit
+                           </button>
+                         </div>
+                           
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            
+                            <pre>
+                              <code [innerHTML]="html_code_L"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                            <pre>
+                              <code [innerHTML]="css_code"></code>
+                            </pre>
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Extra large"> 
+                      <!-- <h3>Default Model Window 4</h3> -->
+                      <div class="container component-view col-md-6 col-lg-9">
+                        <div class="modal-content ">
+        
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                           <h3 class="modal-title">Heading Title</h3>
+                           <button type="button" class="close" data-dismiss="modal">
+                            <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                           </button>
+                         </div>
+                         
+                         <!-- Modal body -->
+                         <div class="modal-body">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                         </div>
+                         
+                         <!-- Modal footer -->
+                         <div class="modal-footer">
+                           <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                           <button type="button" class="btn btn-light" data-dismiss="modal" >
+                             Cancel
+                           </button>
+                           <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                             Submit
+                           </button>
+                         </div>
+                           
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            
+                            <pre>
+                              <code [innerHTML]="html_code_XL"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                            <pre>
+                              <code [innerHTML]="css_code"></code>
+                            </pre>
+
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="row component-tabs" *ngIf="selectedType =='FMW'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+                    <tab heading="Top"> 
+                      <!-- <h3>Fluid Model Window</h3> -->
+                      <div class="container component-view">
+                        <!-- <div class="modal-content col-md-3 fluid-top">
+        
+                          
+                          <div class="modal-header">
+                           <h3 class="modal-title">Heading Title</h3>
+                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+                         
+                         
+                         <div class="modal-body">
+                          <p>Each component has been designed to work harmoniously together, as parts of a greater whole.</p>
+                         </div>
+                         
+                         
+                         <div class="modal-footer">
+                           
+                           <button type="button" class="btn btn-light" data-dismiss="modal" >
+                             Cancel
+                           </button>
+                           <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                             Submit
+                           </button>
+                         </div>
+                           
+                         </div> -->
+                         <div class="fluid-style-bg">
+                          <!-- <img src="assets/img/model/fluid-top.png" alt=""> -->
+                          <div class="modal-content" style="width:100%">
+                           
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Title</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                          
+                           <div class="modal-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                           </div>
+                          
+                           <div class="modal-footer">
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+
+                           
+                             
+                           </div>
+                           <div class="" style="padding:30px; text-align:left;">
+                            Click here to view <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#top_modal">Top Modal <i class="fa fa-angle-up pl-2"></i></button>
+                            
+                          </div>
+                         </div>
+
+                         
+                         
+                         
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_T_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_T_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Right"> 
+                      <!-- <h3>Fluid Model Window 2</h3> -->
+                      <div class="container component-view">
+                        <div class="fluid-style-bg">
+                          <!-- <img src="assets/img/model/fluid-right.png" alt=""> -->
+                          <div class="modal-content fluid-right-model" style="float: right; height: 100%;">
+                            
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Title</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                           
+                           <div class="modal-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                           </div>
+                           
+                           <div class="modal-footer">
+                             
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+                          
+                           </div>
+
+                            <div class="" style="padding: 30px;
+                            /* line-height: 50px; */
+                            /* position: relative; */
+                            right: 0px;
+                            width: 40%;
+                            line-height: 57px;
+                            float: left;
+                            text-align: left;">
+                            Click here to view 
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#right_modal_sm">Right Side Modal SM <i class="fa fa-angle-right pl-2"></i></button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#right_modal">Right Side Modal <i class="fa fa-angle-right pl-2"></i></button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#right_modal_lg">Right Side Modal LG <i class="fa fa-angle-right pl-2"></i></button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#right_modal_xl">Right Side Modal XL <i class="fa fa-angle-right pl-2"></i></button>
+                          
+                          </div>
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_R_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_R_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Bottom"> 
+                      <!-- <h3>Fluid Model Window 3</h3> -->
+                      <div class="container component-view">
+                        <div class="fluid-style-bg">
+                          <!-- <img src="assets/img/model/fluid-bottom.png" alt=""> -->
+                          <div class="" style="padding: 30px; line-height: 50px;">
+                            Click here to view 
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bottom_modal">Bottom Modal <i class="fa fa-angle-down pl-2"></i></button>
+                          </div>
+
+                          <div class="modal-content fluid-bottom-model" style="">
+                            
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Title</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                           
+                           <div class="modal-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                           </div>
+                           
+                           <div class="modal-footer">
+                             
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+                          
+                           </div>
+
+                           
+
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_B_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_B_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>  
+                    </tab>
+                    <tab heading="Left"> 
+                      <!-- <h3>fluid Model Window 4</h3> -->
+                      <div class="container component-view">
+                        <div class="fluid-style-bg">
+                          <!-- <img src="assets/img/model/fluid-right.png" alt=""> -->
+                          <div class="modal-content fluid-left-model" style="float: left; height: 100%;">
+                            
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Title</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                           
+                           <div class="modal-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                           </div>
+                           
+                           <div class="modal-footer">
+                             
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+                          
+                           </div>
+
+                            <div class="" style="padding: 30px;
+                            /* line-height: 50px; */
+                            /* position: relative; */
+                            right: 0px;
+                            width: 40%;
+                            line-height: 57px;
+                            float: right;
+                            text-align: right;">
+                            Click here to view 
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#left_modal_sm"><i class="fa fa-angle-left pr-2"></i> Left Side Modal SM</button>
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#left_modal"><i class="fa fa-angle-left pr-2"></i> Left Side Modal</button>
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#left_modal_lg"><i class="fa fa-angle-left pr-2"></i> Left Side Modal LG</button>
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#left_modal_xl"><i class="fa fa-angle-left pr-2"></i> Left Side Modal XL</button>
+                                  
+                          </div>
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_L_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_L_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="row component-tabs" *ngIf="selectedType =='CMW'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+                    <tab heading="Top Left"> 
+                      <!-- <h3>Conversational Model Window</h3> -->
+                      <div class="container component-view">
+                        <div class="conversational-style-bg">
+                          <!-- <img src="assets/img/model/fluid-bottom.png" alt=""> -->
+                          <div class="modal-content con-left-top-model ">
+        
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Left top</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                           
+                           <!-- Modal body -->
+                           <div class="modal-body">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="material-textfield">
+                                  <input placeholder="First Name " type="text">
+                                  <label>First Name</label>
+                                </div>
+                                
+                              </div>
+                            </div>
+                           </div>
+                           
+                           <!-- Modal footer -->
+                           <div class="modal-footer">
+                             <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+                             
+                           </div>
+
+                           
+
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_C_TL_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_C_TL_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Top Right"> 
+                      <!-- <h3>Conversational Model Window 2</h3> -->
+                      <div class="container component-view">
+                        <div class="conversational-style-bg">
+                          <!-- <img src="assets/img/model/fluid-bottom.png" alt=""> -->
+                          <div class="modal-content con-right-top-model ">
+        
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Title</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                           
+                           <!-- Modal body -->
+                           <div class="modal-body">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="material-textfield">
+                                  <input placeholder="First Name " type="text">
+                                  <label>First Name</label>
+                                </div>
+                                
+                              </div>
+                            </div>
+                           </div>
+                           
+                           <!-- Modal footer -->
+                           <div class="modal-footer">
+                             <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+                             
+                           </div>
+
+                           
+
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_C_TR_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_C_TR_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Bottom Right"> 
+                      <!-- <h3>Conversational Model Window 3</h3> -->
+                      <div class="container component-view">
+                        <div class="conversational-style-bg">
+                          <!-- <img src="assets/img/model/fluid-bottom.png" alt=""> -->
+                          <div class="modal-content con-right-bottom-model ">
+        
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Title</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                           
+                           <!-- Modal body -->
+                           <div class="modal-body">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="material-textfield">
+                                  <input placeholder="First Name " type="text">
+                                  <label>First Name</label>
+                                </div>
+                                
+                              </div>
+                            </div>
+                           </div>
+                           
+                           <!-- Modal footer -->
+                           <div class="modal-footer">
+                             <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+                             
+                           </div>
+
+                           
+
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_C_BR_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_C_BR_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>  
+                    </tab>
+                    <tab heading="Bottom Left"> 
+                      <!-- <h3>Conversational Model Window 4</h3> -->
+                      <div class="container component-view">
+                        <div class="conversational-style-bg">
+                          <!-- <img src="assets/img/model/fluid-bottom.png" alt=""> -->
+                          <div class="modal-content con-left-bottom-model ">
+        
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Title</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                           
+                           <!-- Modal body -->
+                           <div class="modal-body">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="material-textfield">
+                                  <input placeholder="First Name " type="text">
+                                  <label>First Name</label>
+                                </div>
+                                
+                              </div>
+                            </div>
+                           </div>
+                           
+                           <!-- Modal footer -->
+                           <div class="modal-footer">
+                             <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+                             
+                           </div>
+
+                           
+
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_C_BL_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_C_BL_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="row component-tabs" *ngIf="selectedType =='MMW'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+                    <tab heading="Regular"> 
+                      <!-- <h3>Mobile Model Window</h3> -->
+                      <div class="container component-view">
+                        <div class="mobile-style-bg">
+                          <!-- <img src="assets/img/model/fluid-bottom.png" alt=""> -->
+                          <div class="modal-content regular-model">
+        
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Title</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                           
+                           <!-- Modal body -->
+                           <div class="modal-body">
+                            <p>Each component has been designed to work harmoniously together, as parts of a greater whole.</p>
+                           </div>
+                           
+                           <!-- Modal footer -->
+                           <div class="modal-footer">
+                             <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+                             
+                           </div>
+
+                           
+
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_M_Default_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_M_Default_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="bottom"> 
+                      <!-- <h3>Mobile Model Window 2</h3> -->
+                      <div class="container component-view">
+                        <div class="mobile-style-bg">
+                          <!-- <img src="assets/img/model/fluid-bottom.png" alt=""> -->
+                          <div class="modal-content bottom-model">
+        
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                             <h3 class="modal-title">Heading Title</h3>
+                             <button type="button" class="close" data-dismiss="modal">
+                              <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                             </button>
+                           </div>
+                           
+                           <!-- Modal body -->
+                           <div class="modal-body">
+                            <p>Each component has been designed to work harmoniously together, as parts of a greater whole.</p>
+                           </div>
+                           
+                           <!-- Modal footer -->
+                           <div class="modal-footer">
+                             <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                             <button type="button" class="btn btn-light" data-dismiss="modal" >
+                               Cancel
+                             </button>
+                             <button type="button" class="btn btn-primary" data-dismiss="modal" >
+                               Submit
+                             </button>
+                           </div>
+                             
+                           </div>
+
+                           
+
+                         </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <pre>
+                              <code [innerHTML]="html_code_M_Bottom_M"></code>
+                            </pre> 
+                            
+                          </tab>
+                          <tab heading="SCSS"> 
+                            <pre>
+                              <code [innerHTML]="css_code_M_Bottom_M"></code>
+                            </pre> 
+
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    
+                    
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+
+            
+          </tab>
+          <tab heading="Development">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>Model Window Integration</h3>
+                  <!-- content from https://www.itsolutionstuff.com/post/angular-11-bootstrap-4-modal-exampleexample.html -->
+                  <h3>Angular 11 Bootstrap 4 Modal </h3>
+
+                  <h5>Install Bootstrap 4</h5>
+                  
+                 <div class="codebox">
+                  <p>npm install bootstrap --save</p>
+                 </div>
+
+                 <p>Now, we need to include bootstrap css like "node_modules/bootstrap/dist/css/bootstrap.min.css", so let's add it on angular.json file.</p>
+
+                 <h5>angular.json</h5>
+                 <div class="codebox">
+                   <p>..... <br>
+                    "styles": [<br>
+                      "node_modules/bootstrap/dist/css/bootstrap.min.css",<br>
+                      "src/styles.css"<br>
+                    ],<br>
+                .....</p>
+                 </div>
+                 <h5> Install Ng Bootstrap</h5>
+                 <div class="codebox">
+                   <p>npm install --save @ng-bootstrap/ng-bootstrap</p>
+                 </div>
+
+                 <h5>Import Module</h5>
+                 <p>In this step, we need to import NgbModule to app.module.ts file. so let's import it as like bellow:</p>
+                 <h5>src/app/app.module.ts</h5>
+
+                 <div class="codebox">
+                  <pre>
+                    <code [innerHTML]="java_codeappModuleTs"></code>
+                  </pre>
+                   
+                 </div>
+                 <p>Now here, we will updated our html file. we will create simple bootstrap model template file. <br> <br>
+
+                  so let's put bellow code:</p>
+                  <h5>src/app/app.component.html</h5>
+
+                  <div class="codebox">
+                    <pre>
+                      <code [innerHTML]="html_codeModel"></code>
+                    </pre>
+                     
+                   </div>
+                 
+
+                </div>
+    
+                <div class="divider-50"></div>
+               
+              </div>
+    
+          </tab>
+         
+          <tab heading="Usage-Instructions">
+
+            <div class="row">
+              <div class="col-md-12">
+                <img src="assets/img/model/img-01.png" alt="">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-6">
+                <img src="assets/img/model/img-02.png" alt="">
+                <img src="assets/img/model/img-06.png" alt="">
+              </div>
+              <div class="col-md-6">
+                <img src="assets/img/model/img-03.png" alt="">
+                <img src="assets/img/model/img-04.png" alt="">
+                <img src="assets/img/model/img-05.png" alt="">
+              </div>
+            </div>
+          </tab>
+        </tabset>
+      </div><!--/.col-->
+        </div>
+
+
+
+            <!-- 
+            <div class="mt-5">
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#left_modal_sm"><i class="fa fa-angle-left pr-2"></i> Left Side Modal SM</button>
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#left_modal"><i class="fa fa-angle-left pr-2"></i> Left Side Modal</button>
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#left_modal_lg"><i class="fa fa-angle-left pr-2"></i> Left Side Modal LG</button>
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#left_modal_xl"><i class="fa fa-angle-left pr-2"></i> Left Side Modal XL</button>
+            </div>
+
+            <div class="mt-5">
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#left_modal_xs"><i class="fa fa-angle-left pr-2"></i> Left Modal XS</button>
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#regular_modal">Regular Modal <i class="fa fa-window-maximize pl-2"></i></button>
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#fullscreen_modal">Full Screen Modal <i class="fa fa-arrows-alt pl-2"></i></button>
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#right_modal_xs">Right Modal XS <i class="fa fa-angle-right pl-2"></i></button>
+            </div>
+
+            <div class="mt-5">
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#right_modal_sm">Right Side Modal SM <i class="fa fa-angle-right pl-2"></i></button>
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#right_modal">Right Side Modal <i class="fa fa-angle-right pl-2"></i></button>
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#right_modal_lg">Right Side Modal LG <i class="fa fa-angle-right pl-2"></i></button>
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#right_modal_xl">Right Side Modal XL <i class="fa fa-angle-right pl-2"></i></button>
+            </div>
+
+            <div class="mt-5">
+              <button type="button" class="btn btn-light border rounded-pill shadow-sm mb-1" data-toggle="modal" data-target="#bottom_modal">Bottom Modal <i class="fa fa-angle-down pl-2"></i></button>
+            </div> -->
+
+
+
+              <div class="modal modal-left xs fade" id="left_modal_xs" tabindex="-1" role="dialog" aria-labelledby="top_modal">
+                <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                  <div class="modal-content h-auto rounded-right">
+                    <div class="modal-header">
+                      <h5 class="modal-title"><i class="fa fa-cog"></i> Preferences</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body text-center">
+                      <a href="#" class="btn btn-primary">1</a> <a href="#" class="btn btn-success">2</a> <a href="#" class="btn btn-danger">3</a> <a href="#" class="btn btn-warning">4</a> <a href="#" class="btn btn-info">5</a> <a href="#" class="btn btn-secondary">6</a> <a href="#" class="btn btn-dark">7</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal modal-right xs fade" id="right_modal_xs" tabindex="-1" role="dialog" aria-labelledby="top_modal">
+                <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                  <div class="modal-content h-auto rounded-left">
+                    <div class="modal-header">
+                      <h5 class="modal-title"><i class="fa fa-share-alt"></i> Share</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body text-center">
+                      <a href="#" class="btn btn-lg btn-dark rounded-pill"><i class="fa fa-twitter"></i></a> <a href="#" class="btn btn-lg btn-dark rounded-pill"><i class="fa fa-facebook"></i></a> <a href="#" class="btn btn-lg btn-dark rounded-pill"><i class="fa fa-instagram"></i></a> <a href="#" class="btn btn-lg btn-dark rounded-pill"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================================================== -->
+
+              <div class="modal modal-top fade" id="top_modal" tabindex="-1" role="dialog" aria-labelledby="top_modal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Top Modal Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed d-none">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================================================== -->
+
+              <div class="modal modal-left fade" id="left_modal_sm" tabindex="-1" role="dialog" aria-labelledby="left_modal_sm">
+                <div class="modal-dialog modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Left Modal SM Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal modal-left fade" id="left_modal" tabindex="-1" role="dialog" aria-labelledby="left_modal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Left Modal Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal modal-left fade" id="left_modal_lg" tabindex="-1" role="dialog" aria-labelledby="left_modal_lg">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Left Modal LG Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal modal-left fade" id="left_modal_xl" tabindex="-1" role="dialog" aria-labelledby="left_modal_xl">
+                <div class="modal-dialog modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Left Modal XL Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================================================== -->
+
+              <div class="modal modal-right fade" id="right_modal_sm" tabindex="-1" role="dialog" aria-labelledby="right_modal_sm">
+                <div class="modal-dialog modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Right Modal SM Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>right model sm title Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal modal-right fade" id="right_modal" tabindex="-1" role="dialog" aria-labelledby="right_modal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Right Modal Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>right modal title only Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal modal-right fade" id="right_modal_lg" tabindex="-1" role="dialog" aria-labelledby="right_modal_lg">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Right Modal LG Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Right modal LG titleAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal modal-right fade" id="right_modal_xl" tabindex="-1" role="dialog" aria-labelledby="right_modal_xl">
+                <div class="modal-dialog modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Right Modal XL Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================================================== -->
+
+              <div class="modal fade" id="regular_modal" tabindex="-1" role="dialog" aria-labelledby="regular_modal">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Regular Modal Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================================================== -->
+
+              <div class="modal modal-bottom fade" id="bottom_modal" tabindex="-1" role="dialog" aria-labelledby="bottom_modal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Bottom Modal Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed d-none">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ==================================================== -->
+
+              <div class="modal modal-full fade" id="fullscreen_modal" tabindex="-1" role="dialog" aria-labelledby="fullscreen_modal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header d-none">
+                      <h5 class="modal-title">Full Screen Modal Title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+                      </button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center flex-column bg-dark">
+                      <h2 class="my-3"><a class="text-light text-decoration-none" href="#1">Home</a></h2>
+                      <h2 class="my-3"><a class="text-light text-decoration-none" href="#2">About</a></h2>
+                      <h2 class="my-3"><a class="text-light text-decoration-none has-sub" href="#3" data-toggle="collapse" data-target="#categories" aria-expanded="false" aria-controls="categories">Products</a></h2>
+                      <div class="collapse" id="categories">
+                        <h4><a class="text-light text-decoration-none" href="#31">Category 1</a></h4>
+                        <h4><a class="text-light text-decoration-none has-sub" href="#32" data-toggle="collapse" data-target="#subcategories" aria-expanded="false" aria-controls="subcategories">Category 2</a></h4>
+                        <div class="collapse" id="subcategories">
+                          <h5 class="ml-3 py-1"><a class="text-light text-decoration-none" href="#311">Subcategory 1</a></h5>
+                          <h5 class="ml-3 py-1"><a class="text-light text-decoration-none" href="#322">Subcategory 2</a></h5>
+                          <h5 class="ml-3 py-1"><a class="text-light text-decoration-none" href="#333">Subcategory 3</a></h5>
+                        </div>
+                        <h4><a class="text-light text-decoration-none" href="#33">Category 3</a></h4>
+                      </div>
+                      <h2 class="my-3"><a class="text-light text-decoration-none" href="#4">FAQ</a></h2>
+                      <h2 class="my-3"><a class="text-light text-decoration-none" href="#5">Contact</a></h2>
+                      <h2 class="close-modal display-2"><a class="text-light text-decoration-none" href="#0" data-dismiss="modal">&times;</a></h2>
+                    </div>
+                    <div class="modal-footer modal-footer-fixed d-none">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="animated fadeIn">
+
+
+                
+                
+  </div>
+  
+  
+</div>
+
+
+  

@@ -1,0 +1,316 @@
+
+<!doctype html>
+<html>
+<head>
+  <base href="./">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ASG UI Portal is a Library with plenty of predefined components ">
+  <meta name="author" content="ASG UX Team">
+  <meta name="keyword" content="ASG UI Design Library, Components Library, Design Portal">
+  <link rel="shortcut icon" href="assets/lineup-icon.png">
+  <script src="assets/js/login.js"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  
+	<title>ASG UI Portal</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  
+</head>
+<body class="app">
+  <!-- App Loading... -->
+  <script>
+  
+
+    </script>
+
+<script type="text/javascript" src="bower_components/ng-bs-navbar/dist/ng-bs-navbar.js"></script>
+<link rel="stylesheet" href="bower_components/ng-bs-navbar/dist/ng-bs-navbar.css" type="text/css" />
+<link rel="stylesheet" href="bower_components/ng-bs-navbar/dist/ng-bs-navbar-theme-dark.css" type="text/css" />
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script>
+     var wrap = $("#wrap");
+
+wrap.on("scroll", function(e) {
+    
+  if (this.scrollTop > 147) {
+    wrap.addClass("fix-search");
+  } else {
+    wrap.removeClass("fix-search");
+  }
+}
+);
+
+
+$('#range').on("input", function() {
+    $('.output').val(this.value +",000  $" );
+    }).trigger("change");
+
+
+
+    function mytheme() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+
+ 
+
+
+    function changeHeadingBg(color){
+                       document.getElementById("heading").style.color = color;
+                       
+                   }
+    function changeHeadingBgcolor(backgroundColor){
+                  document.getElementById("heading").style.backgroundColor = backgroundColor; 
+                       
+                   }
+
+
+                   
+
+     function changeHeadingBgb(color){
+                       document.getElementById("heading2").style.color = color;
+                   }
+     function changeHeadingBgcolorb(backgroundColor){
+                  document.getElementById("heading2").style.backgroundColor = backgroundColor; 
+                       
+                   }
+
+     function changeHeadingBgc(color){
+                       document.getElementById("heading3").style.color = color;
+                   }
+     function changeHeadingBgcolorc(backgroundColor){
+                  document.getElementById("heading3").style.backgroundColor = backgroundColor; 
+                       
+                   }
+     function changeHeadingBgd(color){
+                       document.getElementById("heading4").style.color = color;
+                   }
+     function changeHeadingBgcolord(backgroundColor){
+                  document.getElementById("heading4").style.backgroundColor = backgroundColor; 
+                       
+                   }
+     function changeHeadingBge(color){
+                       document.getElementById("heading5").style.color = color;
+                   }
+     function changeHeadingBgcolore(backgroundColor){
+                  document.getElementById("heading5").style.backgroundColor = backgroundColor; 
+                       
+                   }
+     function changeHeadingBgf(color){
+                       document.getElementById("heading6").style.color = color;
+                   }
+     function changeHeadingBgcolorf(backgroundColor){
+                  document.getElementById("heading6").style.backgroundColor = backgroundColor; 
+                       
+                   }
+     function changeHeadingBgg(color){
+                       document.getElementById("body-txt").style.color = color;
+                   }
+     function changeHeadingBgcolorg(backgroundColor){
+                  document.getElementById("body-txt").style.backgroundColor = backgroundColor; 
+                       
+                   }
+// document.getElementById("heading").style.backgroundColor = backgroundColor; 
+                   
+
+const $icon = document.querySelector('.arrow-icon');
+const $arrow = document.querySelector('.arrow');
+
+$icon.onmouseover = () => {
+  $arrow.animate([
+    {left: '0'},
+    {left: '10px'},
+    {left: '0'}
+  ],{
+    duration: 700,
+    iterations: Infinity
+  });
+}
+$icon.onmouseout = () => {
+  $arrow.animate([
+    {left: '0'},
+    {left: '0px'},
+    {left: '0'}
+  ],{
+    duration: 700,
+    iterations: Infinity
+  });
+}
+
+
+
+
+
+$('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
+
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+  
+
+
+
+//  $(document).ready(function(){
+//         // Add minus icon for collapse element which is open by default
+//         $(".collapse.show").each(function(){
+//         	$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+//         });
+        
+//         // Toggle plus minus icon on show hide of collapse element
+//         $(".collapse").on('show.bs.collapse', function(){
+//         	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+//         }).on('hide.bs.collapse', function(){
+//         	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+//         });
+//     });
+
+
+
+$(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+        	$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
+
+        $('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
+
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+
+
+  
+    });
+
+
+
+    $(document).ready(function(){
+
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+var current = 1;
+var steps = $("fieldset").length;
+
+setProgressBar(current);
+
+$(".next").click(function(){
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+//Add Class Active
+$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+next_fs.show();
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+next_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(++current);
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 500
+});
+setProgressBar(--current);
+});
+
+function setProgressBar(curStep){
+var percent = parseFloat(100 / steps) * curStep;
+percent = percent.toFixed();
+$(".progress-bar")
+.css("width",percent+"%")
+}
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+
+    
+
+</script>
+
+
+<script>
+  function categoryAdd() {
+    var x = document.getElementById("addCategory");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function subCategoryAdd() {
+    var x = document.getElementById("addSubCategory");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  function productsAdd() {
+    var x = document.getElementById("addproducts");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
+
+</body>
+</html>

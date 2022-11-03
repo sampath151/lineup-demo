@@ -1,0 +1,104 @@
+<perfect-scrollbar>
+  <div class="overlay thin-scroll" [hidden]="!isVisible" [@fadeAnimation]="isVisible">
+    <div class="overlay-content has-results">
+      <div class="container-fluid">
+        <div class="overlay-brand">
+          <zenith-header-logo
+            [logoUrl]="logoUrl"
+            (click)="goToDashboards($event)"
+          ></zenith-header-logo>
+        </div>
+        <a
+          class="close-icon-light overlay-close text-black "
+          (click)="close($event)"
+          draggable="false"
+          ><i class="pg pg-close"></i
+        ></a>
+      </div>
+      <div class="container-fluid">
+
+
+        <input autocomplete="off"
+        #searchField
+        (keyup)="searchKeyPress($event)"
+        class="no-border overlay-search bg-transparent"
+        [(ngModel)]="value"
+        placeholder="{{ 'settings.shared.action_search_placeholder' | translate }}..."
+        spellcheck="false"  />
+        
+        
+        
+        <br />
+      </div>
+      <div class="container-fluid search-container">
+        <span
+          ><strong>
+            {{ 'global_search.overlay.suggestions' | translate }}
+          </strong></span
+        >
+        <span
+          class="search-link d-lg-inline-block d-none btn-link"
+          (click)="searchByCategory(applicationType.MICRO_APP)"
+          draggable="false"
+          >{{ 'global_search.overlay.suggestions_apps' | translate }}</span
+        >
+        <span
+          class="search-link d-lg-inline-block d-none btn-link"
+          (click)="searchByCategory(applicationType.DASHBOARD)"
+          draggable="false"
+          >{{ 'global_search.overlay.suggestions_dashboards' | translate }}</span
+        >
+        <span
+          class="search-link d-lg-inline-block d-none btn-link"
+          (click)="searchByCategory(applicationType.WEB_APP)"
+          draggable="false"
+          >{{ 'global_search.overlay.suggestions_webapps' | translate }}</span
+        >
+
+        <span
+          class="search-link d-lg-inline-block d-none btn-link"
+          (click)="searchByCategory(applicationType.PAGE)"
+          draggable="false"
+          >{{ 'global_search.overlay.suggestions_pages' | translate }}</span
+        >
+        <br />
+        <br />
+        <div class="search-results">
+          <p
+            class="bold"
+            *ngIf="!loading && globalSearchResultList && globalSearchResultList.length > 0"
+          >
+            {{ 'global_search.overlay.results' | translate }}
+          </p>
+          <div class="no-result-container" *ngIf="loading">
+            <app-loader [size]="'res'" [loading]="loading" indeterminate="true"></app-loader>
+          </div>
+          <div
+            class="no-result-container"
+            *ngIf="!loading && globalSearchResultList && globalSearchResultList.length === 0"
+          >
+            <div class="no-results">
+              <zenith-no-items
+                [image]="'magnifying_glass.png'"
+                [imagePrefixPath]="noItemImagePrefixPath"
+                [title]="'global_search.no_items_found.title' | translate: { string: value }"
+                [message]="'global_search.no_items_found.message_1'"
+                [message_2]="'global_search.no_items_found.message_2'"
+              >
+              </zenith-no-items>
+            </div>
+          </div>
+          <div class="row" *ngIf="!loading && globalSearchResultList">
+            <div class="col-md-6 col-sm-push-6" *ngFor="let item of globalSearchResultList">
+              <app-item-result
+                [searchTerm]="searchTerm"
+                [item]="item"
+                (close)="close($event)"
+              ></app-item-result>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</perfect-scrollbar>

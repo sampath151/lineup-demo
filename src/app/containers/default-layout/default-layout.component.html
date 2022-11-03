@@ -1,0 +1,394 @@
+<app-header ng-app="textSizeSlider"
+
+[navbarBrandRouterLink]="['/dashboard']"
+  [fixed]="true"
+  [navbarBrandMinimized]="{src: 'assets/img/brand/sygnet.svg', width: 30, height: 30, alt: 'ASGUI Logo'}"
+  [navbarBrandFull]="{src: 'assets/img/brand/logo.svg', width: 89, height: 25, alt: 'ASGUI Logo'}"
+  
+  [asideMenuToggler]="'lg'">
+  
+
+  <!-- <div class="global-search">
+
+    <i class="cui-magnifying-glass icons font-2"></i> 
+  </div> -->
+
+  
+
+  <!-- <div class="g-search">
+    <div class="nav-link global-search-bg" data-toggle="modal" data-target="#global-search"  >Search <svg class="icon">
+      <use [attr.xlink:href]="'#search'" />
+    </svg>         
+    </div>
+  </div> -->
+ 
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item d-md-down-none g-search-m header-sm-btn">
+      <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+      <div class="nav-link" data-toggle="modal" data-target="#global-search"  > 
+        <!-- <i class="cui-magnifying-glass "></i>          -->
+        <svg class="icon">
+          <use [attr.xlink:href]="'#search'" />
+        </svg>
+      </div>
+
+      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#global-search">
+        Open modal
+      </button> -->
+    </li>
+    <li class="nav-item d-md-down-none header-sm-btn">
+      <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+     
+      <div class="nav-link tooltip"  > 
+        <!-- <i class="icon-bell"></i>  -->
+        <svg class="icon icon-deactive">
+          <use [attr.xlink:href]="'#email'" />
+        </svg>
+        <!-- <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+        </div> -->
+        <span class="tooltiptext tip-btm">Email Deactive</span>
+      </div>
+    </li>
+    <li class="nav-item d-md-down-none header-sm-btn"> 
+      <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+     
+      <div class="nav-link tooltip" > 
+        <!-- <i class="icon-bell"></i>  -->
+        <svg class="icon icon-deactive">
+          <use [attr.xlink:href]="'#notification'" />
+          
+        </svg>
+        <!-- <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+        </div> -->
+        <span class="tooltiptext tip-btm">Notification its Deactive</span>
+      </div>
+    </li>
+
+    <li class="nav-item d-md-down-none header-sm-btn">
+      <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+     
+      <div class="nav-link" onclick="mytheme()">Light 
+        <!-- <i class="icon-bell"></i>  -->
+        <svg  class="icon theme-light-icon">
+          <use  [attr.xlink:href]="'#light'" />
+        </svg>
+        <svg  class="icon theme-dark-icon">
+          <use  [attr.xlink:href]="'#moon'" />
+        </svg>
+
+        <!-- <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+        </div> -->
+      </div>
+    </li>
+    <!-- <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class="icon-list"></i></a>
+    </li>
+    <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+    </li> -->
+    <li class="nav-item dropdown" dropdown placement="bottom right">
+      <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+       <div class="user-area">
+         <div class="profile-pic"> <img src="assets/img/avatars/user-icon.png" class="img-avatar" alt="admin@bootstrapmaster.com"/></div>
+         <div class="user-name">User Name ksadf
+           <p>Admin</p>
+         </div>         
+       </div>
+      </a>
+     
+      <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+       <div class="user-area-dropdown">
+         <ul>
+           <li routerLink="/roles/assignroles" >Role Managment</li>
+           <li [routerLink]="['/login']"><i class="icon-power"></i> Logout</li>
+         </ul>
+       </div>
+      </div>
+    </li>
+    <!-- <li class="nav-item d-md-down-none header-sm-btn">
+      <button onclick="myFunction()">Toggle dark mode</button>
+     
+      
+    </li> -->
+  </ul>
+</app-header>
+
+<div class="app-body">
+  <app-sidebar #appSidebar [fixed]="true" [display]="'lg'" [minimized]="sidebarMinimized" (minimizedChange)="toggleMinimize($event)">
+    <div class="logo" routerLink="/" style="cursor:pointer">
+      <div class="logo-img"></div>
+      <div class="version-alpha">Alpha</div>
+      
+    </div>
+
+    
+    <div class="footer">
+        
+      <a href="https://team.asg.com/secure/Dashboard.jspa" target="_blank">
+        <button type="button" class="btn btn-primary rise-btn">Raise a Request</button><br> 
+        <button type="button" class="btn-primary rar">
+          <img src="assets/Icons/dashboard/Jira-icon.png" alt="Jira Ticket">
+        </button><br>
+
+      </a>
+      <!-- <span>Product by</span><img src="assets/asg-logo.png" style="width:28px; height:auto;" alt=""> -->
+      <!-- <br> -->
+      <span><a href="https://www.rocketsoftware.com/">
+        <img src="../../../assets/rocket-logo-light.png" style="width: 140px; height:auto;" alt=""> <br>
+      </a> &copy; 2022 All rights reserved.</span>
+    
+    </div>
+   <app-sidebar-minimizer>
+      
+    </app-sidebar-minimizer>
+     <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
+    <!-- <app-sidenav></app-sidenav> -->
+  </app-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    <!-- Breadcrumb -->
+    <!-- breaking change 'cui-breadcrumb' -->
+    <cui-breadcrumb>
+      <!-- Breadcrumb Menu-->
+      <li class="breadcrumb-menu d-md-down-none">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <!-- <a class="btn" href="#"><i class="icon-speech"></i></a>
+          <a class="btn" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+          <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a> -->
+          <!-- <a href="">asdfasdf</a> -->
+         
+            
+          
+        </div>
+      </li>
+    </cui-breadcrumb>
+    <!-- deprecation warning for 'app-breadcrumb' -->
+    <!--<ol class="breadcrumb">-->
+      <!--<app-breadcrumb></app-breadcrumb>-->
+      <!--&lt;!&ndash; Breadcrumb Menu&ndash;&gt;-->
+      <!--<li class="breadcrumb-menu d-md-down-none">-->
+        <!--<div class="btn-group" role="group" aria-label="Button group with nested dropdown">-->
+          <!--<a class="btn" href="#"><i class="icon-speech"></i></a>-->
+          <!--<a class="btn" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>-->
+          <!--<a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>-->
+        <!--</div>-->
+      <!--</li>-->
+    <!--</ol>-->
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div><!-- /.container-fluid -->
+  </main>
+  <app-aside [fixed]="true" [display]="false" [ngClass]="'test'">
+    <tabset>
+      <tab>
+        <ng-template tabHeading><i class="icon-list"></i></ng-template>
+        <div class="list-group list-group-accent">
+          <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Today</div>
+          <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
+            <div class="avatar float-right">
+              <img class="img-avatar" src="assets/img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+            </div>
+            <div>Meeting with
+              <strong>Lucas</strong>
+            </div>
+            <small class="text-muted mr-3">
+              <i class="icon-calendar"></i>  1 - 3pm</small>
+            <small class="text-muted">
+              <i class="icon-location-pin"></i>  Palo Alto, CA</small>
+          </div>
+          
+          <div class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">Tomorrow</div>
+          
+         
+        </div>
+      </tab>
+      <tab>
+        <ng-template tabHeading><i class="icon-speech"></i></ng-template>
+        <div class="p-3">
+          <div class="message">
+            <div class="py-3 pb-5 mr-3 float-left">
+              <div class="avatar">
+                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                <span class="avatar-status badge-success"></span>
+              </div>
+            </div>
+            <div>
+              <small class="text-muted">Lukasz Holeczek</small>
+              <small class="text-muted float-right mt-1">1:52 PM</small>
+            </div>
+            <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+          </div>
+          <hr>
+          
+          <hr>
+         
+          <hr>
+          
+          <hr>
+          
+        </div>
+      </tab>
+      <tab>
+        <ng-template tabHeading><i class="icon-settings"></i></ng-template>
+        <div class="p-3">
+          <h6>Settings</h6>
+          <div class="aside-options">
+            <div class="clearfix mt-4">
+              <small><b>Option 1</b></small>
+              <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                <input type="checkbox" class="switch-input" checked>
+                <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+              </label>
+            </div>
+            <div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+            </div>
+          </div>
+          <div class="aside-options">
+            <div class="clearfix mt-3">
+              <small><b>Option 2</b></small>
+              <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                <input type="checkbox" class="switch-input">
+                <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+              </label>
+            </div>
+            <div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+            </div>
+          </div>
+          <div class="aside-options">
+            <div class="clearfix mt-3">
+              <small><b>Option 3</b></small>
+              <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                <input type="checkbox" class="switch-input">
+                <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+                <span class="switch-handle"></span>
+              </label>
+            </div>
+          </div>
+          <div class="aside-options">
+            <div class="clearfix mt-3">
+              <small><b>Option 4</b></small>
+              <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                <input type="checkbox" class="switch-input" checked>
+                <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+              </label>
+            </div>
+          </div>
+         
+          
+        </div>
+      </tab>
+    </tabset>
+  </app-aside>
+</div>
+<!-- <app-footer>
+  <span><a href="https://asg.com">ASG</a> &copy; 2021 All rights reserved.</span>
+</app-footer> -->
+
+
+
+
+
+<div class="modal " id="global-search">
+  <div class="modal-dialog modal-dialog-full">
+    <div class="modal-content global-search-body">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <img src="assets/lineup-logo.png" alt="">
+        <button type="button" class="close" style="font-size: 35px;" data-dismiss="modal">
+          <svg class="icon"><use [attr.xlink:href]="'#close'" /></svg>
+        </button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="search-bar">
+           <input placeholder="Search... " [(ngModel)]="searchText" type="text" />
+          
+          <!-- <button class="btn btn-primary" >Get Data</button> -->
+        </div>
+
+    <div class="divider-20"></div>
+        <p class="tagline"> Press Enter to get the data</p>
+       
+        
+        <div style="clear:both"></div>
+        <!-- <div class="material-textfield col-md-12"> -->
+          
+        <!-- </div> -->
+          <div class="row suggestion-data">
+            <div class="divider-50"></div>
+          <h3 class="primary-color">Suggestions:</h3>
+
+          <div class="divider-50"></div>
+            <div class="col-md-6 col-lg-6 p-15">
+              <div class="suggestion-text-box">
+                <div class="icon-area">
+                  <img src="assets/img/common/D-icon.png" alt="D Icon"> 
+                </div>
+                <div class="icon-text">
+                  <h5>{{searchText}} onpage</h5>
+              <p>I love reading people’s about page especially those who are in the same 
+                industry as me.</p>
+                </div>
+              </div>
+
+              <div class="suggestion-text-box">
+                <div class="icon-area">
+                  <img src="assets/img/common/t-icon.png" alt="T Icon">
+                </div>
+                <div class="icon-text">
+                  <h5> {{searchText}} Releated Topics </h5>
+            <p>I love reading people’s about page especially those who are in the same 
+              industry as me.</p>
+                </div>
+              </div>
+
+              <div class="suggestion-text-box">
+                <div class="icon-area">
+                  <img src="assets/img/common/k-icon.png" alt="K Icon"> 
+                </div>
+                <div class="icon-text">
+                  <h4>{{searchText}} Components </h4>
+                  <p>I love reading people’s about page especially those who are in the same 
+                    industry as me.</p> 
+                </div>
+              </div>
+              
+    
+            </div>
+
+            <div class="col-md-6 col-lg-6 p-15">
+              <h5>{{searchText}} On Product</h5> 
+              <p>I love reading people’s about page especially those who are in the same 
+                industry as me.</p> <br>
+            <h5>{{searchText}} Sales Topics </h5>
+            <p>I love reading people’s about page especially those who are in the same 
+              industry as me.</p> <br>
+            <h4>{{searchText}} Testing </h4>
+            <p>I love reading people’s about page especially those who are in the same 
+              industry as me.</p> <br>
+
+            </div>
+          </div>
+        
+      
+
+       
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+        <app-icons></app-icons>
+      </div>
+      
+    </div>
+  </div>
+</div>

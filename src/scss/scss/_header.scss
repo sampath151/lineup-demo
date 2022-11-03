@@ -1,0 +1,241 @@
+@media screen and (min-width:200px) and (max-width:700px) {
+  .app-header {
+    background: #FFF;
+  }
+  .dark-mode{
+    .app-header {
+      background: #171717;
+    }
+  }
+}
+
+@media screen and (min-width:701px) and (max-width:3000px) {
+  .app-header {
+    position: relative;
+    flex-direction: row;
+    height: $navbar-height;
+    padding: 0;
+    margin: 0;
+    background-color: $navbar-bg;
+    // background:url(assets/img/common/header-bg.png) no-repeat #FFF;
+  }
+}
+
+.app-header {
+  position: relative;
+  flex-direction: row;
+  height: $navbar-height;
+  padding: 0;
+  margin: 0;
+  // background-color: $navbar-bg;
+  // background:url(assets/img/common/header-bg.png) no-repeat #FFF;
+  // background: url(assets/header-bg.png) no-repeat $navbar-bg ;
+  // @include borders($navbar-border);
+
+  .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $navbar-brand-width;
+    height: $navbar-height;
+    padding: 0;
+    margin-right: 0;
+    display: none;
+    background-color: $navbar-brand-bg;
+    // @include borders($navbar-brand-border);
+
+    .navbar-brand-minimized {
+      display: none;
+    }
+  }
+
+
+  .d-md-block{
+    display:none !important;  }
+
+  .d-lg-block{ display:none !important;  }
+
+  .navbar-toggler {
+    min-width: 50px;
+    padding: $navbar-toggler-padding-y 0;
+
+    &:hover .navbar-toggler-icon {
+      background-image: $navbar-toggler-icon-hover;
+    }
+  }
+
+  .navbar-toggler-icon {
+    height: 23px;
+    background-image: $navbar-toggler-icon;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  .header-sm-btn{
+    width: auto;
+    padding: 10px;
+  }
+
+
+  @media screen and (min-width:200px) and (max-width:700px){
+    .nav-item {
+      position: relative;
+      // min-width: 50px;
+      min-width: auto;
+      margin: 0 0px 0 0;
+      text-align: center;
+      border-left: 0px solid #e6e6e6;
+    }
+  }
+
+
+
+  .nav-item {
+    position: relative;
+    min-width: 50px;
+    margin: 0 0px 0 0;
+    text-align: center;
+    border-left: 1px solid #e6e6e6;
+    
+    // border-left-color: #efefef;    
+    // border-left-width: 1px;
+    // border-left-style: solid;
+    // border-left-width: 50px;
+    // position: absolute;
+    
+
+    button {
+      margin: 0 auto;
+    }
+
+    .nav-link {
+      padding-top: 0;
+      padding-bottom: 0;
+      background: 0;
+      border: 0;
+
+      .badge {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -16px;
+        margin-left: 0;
+      }
+
+      > .img-avatar {
+        height: $navbar-height - 20px;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    padding-bottom: 0;
+    line-height: $line-height-base;
+  }
+
+  .dropdown-item {
+    min-width: 180px;
+  }
+}
+
+// .navbar-brand {
+//   color: $navbar-active-color;
+//
+//   @include hover-focus {
+//     color: $navbar-active-color;
+//   }
+// }
+
+
+.dark-mode{
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-color;
+  
+      @include hover-focus {
+        color: #acb4bb;
+      }
+    }
+  
+    .open > .nav-link,
+    .active > .nav-link,
+    .nav-link.open,
+    .nav-link.active {
+      @include plain-hover-focus {
+        color: #acb4bb;
+      }
+    }
+  }
+
+  .nav-item {
+    position: relative;
+    min-width: 50px;
+    margin: 0 0px 0 0;
+    // border:1px solid #3c3c3c;
+    // text-align: center;
+    // border-left: 1px solid #3e3e3e !important
+}
+
+.app-header .nav-item{
+  
+  position: relative;
+    min-width: 50px;
+    margin: 0 0px 0 0;
+    text-align: center;
+  border-left: 1px solid #484747;
+
+}
+}
+
+
+.navbar-nav {
+  .nav-link {
+    color: $navbar-color;
+
+    @include hover-focus {
+      color: $navbar-hover-color;
+    }
+  }
+
+  .open > .nav-link,
+  .active > .nav-link,
+  .nav-link.open,
+  .nav-link.active {
+    @include plain-hover-focus {
+      color: $navbar-active-color;
+    }
+  }
+}
+
+.navbar-divider {
+  background-color: rgba(0, 0, 0, .075);
+}
+
+@include media-breakpoint-up($breakpoint-mobile-up) {
+  .brand-minimized {
+    .app-header {
+      .navbar-brand {
+        display:none;
+        width: $navbar-brand-minimized-width;
+        background-color: $navbar-brand-minimized-bg;
+        @include borders($navbar-brand-minimized-border);
+
+        .navbar-brand-full {
+          display: none;
+        }
+
+        .navbar-brand-minimized {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+.navbar-brand{display:none;}

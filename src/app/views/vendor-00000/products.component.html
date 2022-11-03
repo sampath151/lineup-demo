@@ -1,0 +1,917 @@
+<div class="container-fluid">
+
+  <div class="row ">
+  
+      <div class="element-body col-md-12 p-0">
+          <div class="row">
+              
+              <div class="col-2 hight-80 rt-bdr-1op4 p-0">
+                  <div class="inner-vertical-tabs">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="active" id="v-pills-home-tab" data-toggle="pill" href="#categories" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                      <div class="tab ">
+                          <div class="row">
+                              <div class="internal-nav-ttile">
+                                  <h5>Categories </h5>
+                                  <p class="tagline-txt">A good layout design relates to objectives, reflected in a good user experience.</p>
+                              </div>
+                              <div class="internal-nav-arrow">
+                                  <svg class="icon" style="width:18px; height:18px;">
+                                      <use [attr.xlink:href]="'#arrow-right-nav'" />
+                                    </svg>  
+                              </div>
+                          </div>
+                         
+                       </div>
+                  </a>
+                  <a  id="v-pills-profile-tab" data-toggle="pill" href="#sub-categories" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                      <div class="tab ">
+                          <div class="row">
+                              <div class="internal-nav-ttile">
+                                  <h5>Sub Categories </h5>
+                                  <p class="tagline-txt">Navigation menus are one of the most-viewed and most-clicked-on pieces of interface</p>
+                              </div>
+                              <div class="internal-nav-arrow">
+                                  <svg class="icon" style="width:18px; height:18px;">
+                                      <use [attr.xlink:href]="'#arrow-right-nav'" />
+                                    </svg>  
+                              </div>
+                          </div>
+                        
+                          
+                       </div>
+                  </a>
+                  <a id="v-pills-messages-tab" data-toggle="pill" href="#products" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                      <div class="tab ">
+                          <div class="row">
+                              <div class="internal-nav-ttile">
+                                  <h5>Products</h5>
+                                  <p class="tagline-txt">The use of imagery and graphics is a powerful visual tool that precedes the digital age</p>
+                                </div>
+                              <div class="internal-nav-arrow">
+                                  <svg class="icon" style="width:18px; height:18px;">
+                                      <use [attr.xlink:href]="'#arrow-right-nav'" />
+                                    </svg>  
+                              </div>
+                          </div>
+                       </div>
+                  </a>
+                  
+                
+                </div>
+                  </div>
+              </div>
+  
+  
+              
+              <div class="col-10 hight-80">
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="categories" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                      <div class="row">
+                          <div class="col-md-12 col-lg-12">
+                            
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <h1 id="remove-unnecessry">Categories</h1>
+                                  <input  placeholder="Search... " type="text" style="width:80%;" /> <svg class="icon"><use xlink:href="#search" /></svg>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="col-12 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                                    <button type="button"  onclick="categoryAdd()" class="btn btn-regular btn-primary float-right">Add Category</button>
+                                  </div>
+                                  Filters
+                                  
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="divider-50"></div>
+
+                     
+
+
+                      <div id="addCategory" style="width: 100%;
+                      padding: 20px 0;
+                      margin: 20px 0px 120px; ">
+                      
+                      <form>
+                        <div class="material-textfield">
+                          <input placeholder="Your Category Name" type="text">
+                          <label>Name </label>
+                        </div>
+              
+                        <div class="material-textfield">
+                          <input placeholder="Enter Category Position in menu" type="number">
+                          <label>Position</label>
+                        </div>
+              
+                        <div class="material-textfield">
+                          <div class="select">
+                            <select class="select-text select-dropdown" required>
+                              <option value="" disabled selected></option>
+                              <option value="0">Avaliable</option>
+                              <option value="1">Out of Stock</option>
+                              <option value="1">Not Avaliable</option>
+                              
+                            </select>
+                            <span class="select-highlight"></span>
+                            <span class="select-bar"></span>
+                            <label class="select-label">Status</label>
+                          </div>
+                          </div>
+                        <div class="material-textfield">
+                          <div class="select">
+                            <select class="select-text select-dropdown" required>
+                              <option value="" disabled selected></option>
+                              <option value="0">Yes</option>
+                              <option value="1">No</option>
+                            </select>
+                            <span class="select-highlight"></span>
+                            <span class="select-bar"></span>
+                            <label class="select-label">Visibility</label>
+                          </div>
+                          </div>
+                       
+                        <button type="button" class="btn btn-regular btn-primary float-right">Add</button>
+                      </form>
+                        </div>
+
+                     
+                      
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>ID No </th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Status</th>
+                            <th>No of Products</th>
+                            <th>Visibility</th>
+                            <th>created Date</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>#VDR231213</td>
+                            <td>Ganesh General Store</td>
+                            <td>Grocery</td>
+                            <td>Malkajgiri</td>
+                            <td>Hyderabad</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                            
+                            <td>01/06/2021</td>
+                            
+                            <td>
+                              <button>View</button>
+                              <button>edit</button>
+                              <button>Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#VDR2341213</td>
+                            <td>Ganesh General Store</td>
+                            <td>Grocery</td>
+                            <td>Malkajgiri</td>
+                            <td>Hyderabad</td>
+                            <td>
+                              <span class="badge badge-secondary">Inactive</span>
+                            </td>
+                            
+                            <td>01/06/2021</td>
+                            <td>
+                              <button>View</button>
+                              <button>edit</button>
+                              <button>Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#VDR3242313</td>
+                            <td>Feroz Bike Mechanic</td>
+                            <td>Mechanic</td>
+                            <td>Malkajgiri</td>
+                            <td>Hyderabad</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                            
+                            <td>01/06/2021</td>
+                            
+                            <td>
+                              <button>View</button>
+                              <button>edit</button>
+                              <button>Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#VDR3242313</td>
+                            <td>Karan Water Service</td>
+                            <td>Water Supply</td>
+                            <td>Malkajgiri</td>
+                            <td>Hyderabad</td>
+                            <td>
+                              <span class="badge badge-danger">Banned</span>
+                            </td>
+                            
+                            <td>2012/01/01</td>
+                            
+                            <td>
+                              <button>View</button>
+                              <button>edit</button>
+                              <button>Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#VDR4242313</td>
+                            <td>Maha Laxmi Medicals</td>
+                            <td>Pharmacy</td>
+                            <td>Malkajgiri</td>
+                            <td>Hyderabad</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                            
+                            <td>01/06/2021</td>
+                            
+                            <td>
+                              <button>View</button>
+                              <button>edit</button>
+                              <button>Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#VDR5242313</td>
+                            <td>Pradeep Medicals</td>
+                            <td>Pharmacy</td>
+                            <td>Malkajgiri</td>
+                            <td>Hyderabad</td>
+                            <td>
+                              <span class="badge badge-danger">Banned</span>
+                            </td>
+                            
+                            <td>01/06/2021</td>
+                            
+                            <td>
+                              <button>View</button>
+                              <button>edit</button>
+                              <button>Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#VDR5242313</td>
+                            <td>Krupa Medicals</td>
+                            <td>Pharmacy</td>
+                            <td>Malkajgiri</td>
+                            <td>Hyderabad</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                            
+                            <td>01/06/2021</td>
+                            
+                            <td>
+                              <button>View</button>
+                              <button>edit</button>
+                              <button>Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>#VDR4242313</td>
+                            <td>Dolphin Biryani House</td>
+                            <td>Restaurant</td>
+                            <td>Malkajgiri</td>
+                            <td>Hyderabad</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                            
+                            <td>01/06/2021</td>
+                            
+                            <td>
+                              <button>View</button>
+                              <button>edit</button>
+                              <button>Delete</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                        <li class="page-item active">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                      </ul>
+                    
+
+
+                  </div>
+                  <div class="tab-pane fade" id="sub-categories" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="row">
+                      <div class="col-md-12 col-lg-12">
+                        
+                          <div class="row">
+                            <div class="col-md-6">
+                              <h1 id="remove-unnecessry">Sub Categories</h1>
+                              <input  placeholder="Search... " type="text" style="width:80%;" /> <svg class="icon"><use xlink:href="#search" /></svg>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="col-12 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                                <button type="button"  onclick="subCategoryAdd()" class="btn btn-regular btn-primary float-right">Add Sub Category</button>
+                              </div>
+                              Filters
+                              
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="divider-50"></div>
+
+                 
+
+
+                  <div id="addSubCategory" style="width: 100%;
+                  padding: 20px 0;
+                  margin: 20px 0px 120px; ">
+                  
+                  <form>
+                    <div class="material-textfield">
+                      <input placeholder="Your Category Name" type="text">
+                      <label>Name </label>
+                    </div>
+          
+                    <div class="material-textfield">
+                      <input placeholder="Enter Category Position in menu" type="number">
+                      <label>Position</label>
+                    </div>
+                    <div class="material-textfield">
+                      <div class="select">
+                        <select class="select-text select-dropdown" required>
+                          <option value="" disabled selected></option>
+                          <option value="0">category 01</option>
+                          <option value="1">category 01</option>
+                          <option value="1">category 02</option>
+                          
+                        </select>
+                        <span class="select-highlight"></span>
+                        <span class="select-bar"></span>
+                        <label class="select-label">Select Main Category</label>
+                      </div>
+                      </div>
+          
+                    <div class="material-textfield">
+                      <div class="select">
+                        <select class="select-text select-dropdown" required>
+                          <option value="" disabled selected></option>
+                          <option value="0">Avaliable</option>
+                          <option value="1">Out of Stock</option>
+                          <option value="1">Not Avaliable</option>
+                          
+                        </select>
+                        <span class="select-highlight"></span>
+                        <span class="select-bar"></span>
+                        <label class="select-label">Status</label>
+                      </div>
+                      </div>
+                    <div class="material-textfield">
+                      <div class="select">
+                        <select class="select-text select-dropdown" required>
+                          <option value="" disabled selected></option>
+                          <option value="0">Yes</option>
+                          <option value="1">No</option>
+                        </select>
+                        <span class="select-highlight"></span>
+                        <span class="select-bar"></span>
+                        <label class="select-label">Visibility</label>
+                      </div>
+                      </div>
+                   
+                    <button type="button" class="btn btn-regular btn-primary float-right">Add </button>
+                  </form>
+                    </div>
+
+                 
+                  
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>ID No </th>
+                        <th>Name</th>
+                        
+                        <th>Under Category of</th>
+                        <th>Position</th>
+                        <th>Status</th>
+                        <th>No of Products</th>
+                        <th>Visibility</th>
+                        <th>created Date</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#VDR231213</td>
+                        <td>Ganesh General Store</td>
+                        
+                        <td>Category 01</td>
+                        <td>Grocery</td>
+                        <td>Malkajgiri</td>
+                        <td>Hyderabad</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>01/06/2021</td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#VDR2341213</td>
+                        <td>Ganesh General Store</td>
+                        <td>Category 01</td>
+                        <td>Grocery</td>
+                        <td>Malkajgiri</td>
+                        <td>Hyderabad</td>
+                        <td>
+                          <span class="badge badge-secondary">Inactive</span>
+                        </td>
+                        
+                        <td>01/06/2021</td>
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#VDR3242313</td>
+                        <td>Feroz Bike Mechanic</td>
+                        <td>Category 01</td>
+                        <td>Mechanic</td>
+                        <td>Malkajgiri</td>
+                        <td>Hyderabad</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>01/06/2021</td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#VDR3242313</td>
+                        <td>Karan Water Service</td>
+                        <td>Category 01</td>
+                        <td>Water Supply</td>
+                        <td>Malkajgiri</td>
+                        <td>Hyderabad</td>
+                        <td>
+                          <span class="badge badge-danger">Banned</span>
+                        </td>
+                        
+                        <td>2012/01/01</td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#VDR4242313</td>
+                        <td>Maha Laxmi Medicals</td>
+                        <td>Category 02</td>
+                        <td>Pharmacy</td>
+                        <td>Malkajgiri</td>
+                        <td>Hyderabad</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>01/06/2021</td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#VDR5242313</td>
+                        <td>Pradeep Medicals</td>
+                        <td>Category 01</td>
+                        <td>Pharmacy</td>
+                        <td>Malkajgiri</td>
+                        <td>Hyderabad</td>
+                        <td>
+                          <span class="badge badge-danger">Banned</span>
+                        </td>
+                        
+                        <td>01/06/2021</td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#VDR5242313</td>
+                        <td>Krupa Medicals</td>
+                        <td>Category 01</td>
+                        <td>Pharmacy</td>
+                        <td>Malkajgiri</td>
+                        <td>Hyderabad</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>01/06/2021</td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#VDR4242313</td>
+                        <td>Dolphin Biryani House</td>
+                        <td>Category 01</td>
+                        <td>Restaurant</td>
+                        <td>Malkajgiri</td>
+                        <td>Hyderabad</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>01/06/2021</td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                
+
+
+                  </div>
+  
+                  <div class="tab-pane fade" id="products" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="row">
+                      <div class="col-md-12 col-lg-12">
+                        
+                          <div class="row">
+                            <div class="col-md-6">
+                              <h1 id="remove-unnecessry">Products</h1>
+                              <input  placeholder="Search... " type="text" style="width:80%;" /> <svg class="icon"><use xlink:href="#search" /></svg>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="col-12 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                                <button type="button"  onclick="productsAdd()" class="btn btn-regular btn-primary float-right">Add Sub Category</button>
+                              </div>
+                              Filters
+                              
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="divider-50"></div>
+
+                 
+
+
+                  <div id="addproducts" style="width: 100%;
+                  padding: 20px 0;
+                  margin: 20px 0px 120px; ">
+                  
+                  <form>
+                    <div class="material-textfield">
+                      <input placeholder="Your Product name" type="text">
+                      <label>Name </label>
+                    </div>
+          
+                    <div class="material-textfield">
+                      <input placeholder="Enter product price" type="number">
+                      <label>Price</label>
+                    </div>
+                    <div class="material-textfield">
+                      <input placeholder="Final price if any discount" type="number">
+                      <label>Final Price</label>
+                    </div>
+                    <div class="material-textfield">
+                      <input placeholder="Enter how many of pack" type="number">
+                      <label>Quantity</label>
+                    </div>
+          
+                    <div class="material-textfield">
+                      <div class="select">
+                        <select class="select-text select-dropdown" required>
+                          <option value="" disabled selected></option>
+                          <option value="0">Kg</option>
+                          <option value="1">Ltr</option>
+                          <option value="1">gms</option>
+                          <option value="1">pack</option>
+
+                          
+                        </select>
+                        <span class="select-highlight"></span>
+                        <span class="select-bar"></span>
+                        <label class="select-label">Type of UOM</label>
+                      </div>
+                      </div>
+
+                      <div class="form-group">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                      </div>
+
+                      <div class="material-textfield">
+                        <div class="select">
+                          <select class="select-text select-dropdown" required>
+                            <option value="" disabled selected></option>
+                            <option value="0">Avaliable</option>
+                            <option value="1">Out of Stock</option>
+                            <option value="1">Not Avaliable</option>
+                            
+                          </select>
+                          <span class="select-highlight"></span>
+                          <span class="select-bar"></span>
+                          <label class="select-label">Status</label>
+                        </div>
+                        </div>
+
+                        <div class="material-textfield">
+                          <div class="select">
+                            <select class="select-text select-dropdown" required>
+                              <option value="" disabled selected></option>
+                              <option value="0">Sub Category</option>
+                              <option value="1">Sub Category 01</option>
+                              <option value="1">Sub Category 02</option>
+                              
+                            </select>
+                            <span class="select-highlight"></span>
+                            <span class="select-bar"></span>
+                            <label class="select-label">Select sub Category</label>
+                          </div>
+                          </div>
+
+                    <div class="material-textfield">
+                      <div class="select">
+                        <select class="select-text select-dropdown" required>
+                          <option value="" disabled selected></option>
+                          <option value="0">Yes</option>
+                          <option value="1">No</option>
+                        </select>
+                        <span class="select-highlight"></span>
+                        <span class="select-bar"></span>
+                        <label class="select-label">Visibility</label>
+                      </div>
+                      </div>
+                      <div class="material-textfield">
+                        <input placeholder="sequence number" type="number">
+                        <label>Position</label>
+                      </div>
+                   
+                    <button type="button" class="btn btn-regular btn-primary float-right">Add</button>
+                  </form>
+                    </div>
+
+                 
+                  
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>ID No </th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Final Price</th>
+                        <th>Quantity</th>
+                        <th>UOM Type</th>
+                        <th>Image</th>
+                        <th>Position</th>
+                        <th>Main Category</th>
+                        <th>sub Category</th>
+                        <th>status</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#V13</td>
+                        <td>Brown Rice</td>
+                        <td>Rs 35</td>
+                        <td>Rs 30</td>
+                        <td>1</td>
+                        <td>Kg</td>
+                        <td><img src="assets/img/product-images/brown-rice.jpg" style="width:50px; height:auto;" alt="product img"></td>
+                        <td>1</td>
+                        <td>Rices</td>
+                        <td>Healthy</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#V13</td>
+                        <td>Brown Rice</td>
+                        <td>Rs 35</td>
+                        <td>Rs 30</td>
+                        <td>1</td>
+                        <td>Kg</td>
+                        <td><img src="assets/img/product-images/brown-rice.jpg" style="width:50px; height:auto;" alt="product img"></td>
+                        <td>1</td>
+                        <td>Rices</td>
+                        <td>Healthy</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#V13</td>
+                        <td>Brown Rice</td>
+                        <td>Rs 35</td>
+                        <td>Rs 30</td>
+                        <td>1</td>
+                        <td>Kg</td>
+                        <td><img src="assets/img/product-images/brown-rice.jpg" style="width:50px; height:auto;" alt="product img"></td>
+                        <td>1</td>
+                        <td>Rices</td>
+                        <td>Healthy</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#V13</td>
+                        <td>Brown Rice</td>
+                        <td>Rs 35</td>
+                        <td>Rs 30</td>
+                        <td>1</td>
+                        <td>Kg</td>
+                        <td><img src="assets/img/product-images/brown-rice.jpg" style="width:50px; height:auto;" alt="product img"></td>
+                        <td>1</td>
+                        <td>Rices</td>
+                        <td>Healthy</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#V13</td>
+                        <td>Brown Rice</td>
+                        <td>Rs 35</td>
+                        <td>Rs 30</td>
+                        <td>1</td>
+                        <td>Kg</td>
+                        <td><img src="assets/img/product-images/brown-rice.jpg" style="width:50px; height:auto;" alt="product img"></td>
+                        <td>1</td>
+                        <td>Rices</td>
+                        <td>Healthy</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#V13</td>
+                        <td>Brown Rice</td>
+                        <td>Rs 35</td>
+                        <td>Rs 30</td>
+                        <td>1</td>
+                        <td>Kg</td>
+                        <td><img src="assets/img/product-images/brown-rice.jpg" style="width:50px; height:auto;" alt="product img"></td>
+                        <td>1</td>
+                        <td>Rices</td>
+                        <td>Healthy</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#V13</td>
+                        <td>Brown Rice</td>
+                        <td>Rs 35</td>
+                        <td>Rs 30</td>
+                        <td>1</td>
+                        <td>Kg</td>
+                        <td><img src="assets/img/product-images/brown-rice.jpg" style="width:50px; height:auto;" alt="product img"></td>
+                        <td>1</td>
+                        <td>Rices</td>
+                        <td>Healthy</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#V13</td>
+                        <td>Brown Rice</td>
+                        <td>Rs 35</td>
+                        <td>Rs 30</td>
+                        <td>1</td>
+                        <td>Kg</td>
+                        <td><img src="assets/img/product-images/brown-rice.jpg" style="width:50px; height:auto;" alt="product img"></td>
+                        <td>1</td>
+                        <td>Rices</td>
+                        <td>Healthy</td>
+                        <td>
+                          <span class="badge badge-success">Active</span>
+                        </td>
+                        
+                        <td>
+                          <button>View</button>
+                          <button>edit</button>
+                          <button>Delete</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                
+
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+      </div>
+  </div>
+  
+  
+  </div>
+  
+ 

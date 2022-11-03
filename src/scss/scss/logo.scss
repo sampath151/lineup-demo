@@ -1,0 +1,40 @@
+
+.logo{
+    width:92%;
+    position: absolute;
+    z-index: 1000000;
+    height: 50px;
+}
+
+
+
+
+@media screen and (min-width:120px) and (max-width:250px){
+
+    
+    .founder{ width: 50px; float: left;}
+    .product-logo{ width: 90px; float: left;}
+    .logo-img{width: 119px; height: 34px; background:#F00}
+}
+
+
+@media screen and (min-width:20px) and (max-width:60px){
+
+    
+    .logo-img{width: 119px; height: 34px; background:#F00}
+    .founder{ width: 50px; float: left; display:none}
+    .product-logo{ width: 90px; float: left;}
+}
+
+
+
+
+
+
+.carousel-control.left{
+    background:none !important;
+}
+
+.carousel-control.right{
+    background:none !important;
+}

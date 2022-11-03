@@ -1,0 +1,405 @@
+<div class="row">
+  <div class="col-md-12 mb-12 element-body">
+    <!-- Nav tabs -->
+    <tabset>
+      <tab heading="Overview">
+          
+          
+  <h2>Accordion Example</h2>
+  <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+  <div id="accordion">
+    <div class="accordion">
+      <a class="card-link nav-dropdown-toggle" data-toggle="collapse" href="#collapseOne" >
+        <div class="header">
+        
+          Collapsible Group Item  - 1
+          
+      </div>
+    </a>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div class="body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <div class="accordion">
+    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo"> 
+      <div class="header">
+        Collapsible Group Item  - 2
+      </div>
+    </a>
+
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <div class="accordion">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree"> <div class="header">
+        
+          Collapsible Group Item - 3
+       
+      </div> </a>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="divider-50"></div>
+
+  <div class="container">
+    <div class="row">
+			<div class="col-lg-12 hedding pb-2">
+				<h1> Table Row Toggel </h1>
+			</div>
+			<div class="col-lg-12">
+				<table class="table " style="border-collapse:collapse;">
+				    <thead>
+				        <tr>
+				            <th>No.</th>
+				            <th>Date</th>
+				            <th>Description</th>
+				            <th>Credit</th>
+				            <th>Debit</th>
+				            <th>Balance</th>
+				        </tr>
+				    </thead>
+				    <tbody>
+			    		<tr colspan="6" data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+				            <td>1</td>
+				            <td>12 Jan 2018</td>
+				            <td>Good</td>
+				            <td>$150.00</td>
+				            <td> - </td>
+				            <td>$150.00</td>
+				        </tr>
+				        <tr class="p">
+				            <td colspan="6" class="hiddenRow">
+					            <div class="accordian-body collapse p-3" id="demo1">
+					            	<p>No : <span>1</span></p>
+					            	<p>Date : <span>12 Jan 2018</span> </p>
+					            	<p>Description : <span>Good</span> </p>
+					            	<p>Credit : <span>$150.00</span> </p>
+					            	<p>Debit : <span></span></p>
+					            	<p>Balance : <span>$150.00</span></p>
+					        	</div> 
+				        	</td> 
+				        </tr>
+				        <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
+				            <td>2</td>
+				            <td>12 Jan 2018</td>
+				            <td>Good</td>
+				            <td>$11.00</td>
+				            <td> - </td>
+				            <td>$161.00</td>
+				        </tr>
+				        <tr>
+				            <td colspan="6" class="hiddenRow">
+				            	<div id="demo2" class="accordian-body collapse p-3">
+				            		<p>No : <span>2</span></p>
+					            	<p>Date : <span>12 Jan 2018</span> </p>
+					            	<p>Description : <span>Good</span> </p>
+					            	<p>Credit : <span>$150.00</span> </p>
+					            	<p>Debit : <span></span></p>
+					            	<p>Balance : <span>$150.00</span></p>
+				            	</div>
+				            </td>
+				        </tr>
+						
+				        <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle">
+				            <td>3</td>
+				            <td>12 Jan 2018</td>
+				            <td>Good</td>
+				            <td>$500.00</td>
+				            <td> - </td>
+				            <td>$661.00</td>
+				        </tr>
+				        <tr>
+				            <td colspan="6"  class="hiddenRow">
+				            	<div id="demo3" class="accordian-body collapse p-3">
+				            		<p>No : <span>3</span></p>
+					            	<p>Date : <span>12 Jan 2018</span> </p>
+					            	<p>Description : <span>Good</span> </p>
+					            	<p>Credit : <span>$150.00</span> </p>
+					            	<p>Debit : <span></span></p>
+					            	<p>Balance : <span>$150.00</span></p>
+				            	</div>
+				            </td>
+				        </tr>
+
+				        <tr data-toggle="collapse" data-target="#demo4" class="accordion-toggle">
+				            <td>4</td>
+				            <td>12 Jan 2018</td>
+				            <td>Good</td>
+				            <td>$500.00</td>
+				            <td> - </td>
+				            <td>$661.00</td>
+				        </tr>
+				        <tr>
+				            <td colspan="6"  class="hiddenRow">
+				            	<div id="demo4" class="accordian-body collapse p-3">
+				            		<p>No : <span>4</span></p>
+					            	<p>Date : <span>12 Jan 2018</span> </p>
+					            	<p>Description : <span>Good</span> </p>
+					            	<p>Credit : <span>$150.00</span> </p>
+					            	<p>Debit : <span></span></p>
+					            	<p>Balance : <span>$150.00</span></p>
+				            	</div>
+				            </td>
+				        </tr>
+
+				        <tr data-toggle="collapse" data-target="#demo5" class="accordion-toggle">
+				            <td>5</td>
+				            <td>12 Jan 2018</td>
+				            <td>Good</td>
+				            <td>$500.00</td>
+				            <td> - </td>
+				            <td>$661.00</td>
+				        </tr>
+				        <tr>
+				            <td colspan="6"  class="hiddenRow">
+				            	<div id="demo5" class="accordian-body collapse p-3">
+				            		<p>No : <span>5</span></p>
+					            	<p>Date : <span>12 Jan 2018</span> </p>
+					            	<p>Description : <span>Good</span> </p>
+					            	<p>Credit : <span>$150.00</span> </p>
+					            	<p>Debit : <span></span></p>
+					            	<p>Balance : <span>$150.00</span></p>
+				            	</div>
+				            </td>
+				        </tr>		
+				    </tbody>
+        </table>
+        
+
+
+			</div>
+		</div>
+  </div>
+
+
+    
+      </tab>
+      <tab heading="Development">
+          <div class="row">
+            <div class="col-md-12">
+              <h5>Integrate</h5>
+              <p>Users have a perception of aesthetically pleasing design would work better.
+
+                Appealing & aesthetically pleasing visual design creates a positive impact which makes the users tolerant of the minor usability issues.
+                
+                Aesthetically pleasing design can obscure usability issues and avoid the detection of problems during usability tests.
+                
+                In most cases, this is a positive thing from your perspective. This effect is a major reason why a good user experience can’t just be a functional UI — designing an interface that’s attractive as well as functional is worth the resources.
+                </p>
+            </div>
+
+            <div class="divider-50"></div>
+            <div class="col-md-6 col-ls-6">
+
+              <h5>HTML Code</h5>
+              <div class="html-box">
+                <pre>
+                  <code>
+                    &lt;div id="accordion"&lt;
+                    &lt;div class="accordion"&lt;
+                    &lt;a class="card-link" data-toggle="collapse" href="#collapseOne"&lt;
+                    &lt;div class="header"&lt;
+                          
+                            Collapsible Group Item  - 1
+                            &lt;/div&lt;
+                            &lt;/a&lt;
+                            &lt;div id="collapseOne" class="collapse show" data-parent="#accordion"&lt;
+                            &lt;div class="body"&lt;
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            &lt;/div&lt;
+                            &lt;/div&lt;
+                            &lt;/div&lt;
+                            &lt;div class="accordion"&lt;
+                            &lt;a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo"&lt;
+                            &lt;div class="header"&lt;
+                          Collapsible Group Item  - 2
+                          &lt;/div&lt;
+                          &lt;/a&lt;
+                  
+                          &lt;div id="collapseTwo" class="collapse" data-parent="#accordion"&lt;
+                          &lt;div class="body"&lt;
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="accordion"&gt;
+                            &lt;a class="collapsed card-link" data-toggle="collapse" href="#collapseThree"&gt; &lt;div class="header"&gt;
+                          
+                            Collapsible Group Item - 3
+                         
+                            &lt;/div> &lt;/a&gt;
+                            &lt;div id="collapseThree" class="collapse" data-parent="#accordion"&gt;
+                            &lt;div class="body"&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;/div&gt;
+
+
+
+                            <h3>Data Tables</h3>
+
+                            &lt;table class="table " style="border-collapse:collapse;"&gt;
+                            &lt;thead&gt;
+                                &lt;tr&gt;
+                                    &lt;th&gt;No.&lt;/th&gt;
+                                    &lt;th&gt;Date&lt;/th&gt;
+                                    &lt;th&gt;Description&lt;/th&gt;
+                                    &lt;th&gt;Credit&lt;/th&gt;
+                                    &lt;th&gt;Debit&lt;/th&gt;
+                                    &lt;th&gt;Balance&lt;/th&gt;
+                                &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                              &lt;tr colspan="6" data-toggle="collapse" data-target="#demo1" class="accordion-toggle"&gt;
+                                    &lt;td&gt;1&lt;/td&gt;
+                                    &lt;td&gt;12 Jan 2018&lt;/td&gt;
+                                    &lt;td&gt;Good&lt;/td&gt;
+                                    &lt;td&gt;$150.00&lt;/td&gt;
+                                    &lt;td&gt; - &lt;/td&gt;
+                                    &lt;td&gt;$150.00&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr class="p"&gt;
+                                    &lt;td colspan="6" class="hiddenRow"&gt;
+                                      &lt;div class="accordian-body collapse p-3" id="demo1"&gt;
+                                        &lt;p&gt;No sss: &lt;span&gt;1&lt;/span&gt;&lt;/p&gt;
+                                        &lt;p&gt;Date : &lt;span&gt;12 Jan 2018&lt;/span&gt; &lt;/p&gt;
+                                        &lt;p&gt;Description : &lt;span&gt;Good&lt;/span&gt; &lt;/p&gt;
+                                        &lt;p&gt;Credit : &lt;span&gt;$150.00&lt;/span&gt; &lt;/p&gt;
+                                        &lt;p&gt;Debit : &lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+                                        &lt;p&gt;Balance : &lt;span&gt;$150.00&lt;/span&gt;&lt;/p&gt;
+                                    &lt;/div&gt; 
+                                  &lt;/td&gt; 
+                                &lt;/tr&gt;
+                                &lt;tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle"&gt;
+                                    &lt;td&gt;2&lt;/td&gt;
+                                    &lt;td&gt;12 Jan 2018&lt;/td&gt;
+                                    &lt;td&gt;Good&lt;/td&gt;
+                                    &lt;td&gt;$11.00&lt;/td&gt;
+                                    &lt;td&gt; - &lt;/td&gt;
+                                    &lt;td&gt;$161.00&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td colspan="6" class="hiddenRow"&gt;
+                                      &lt;div id="demo2" class="accordian-body collapse p-3"&gt;
+                                        &lt;p&gt;No : &lt;span&gt;2&lt;/span&gt;&lt;/p&gt;
+                                        &lt;p&gt;Date : &lt;span&gt;12 Jan 2018&lt;/span&gt; &lt;/p&gt;
+                                        &lt;p&gt;Description : &lt;span&gt;Good&lt;/span&gt; &lt;/p&gt;
+                                        &lt;p&gt;Credit : &lt;span&gt;$150.00&lt;/span&gt; &lt;/p&gt;
+                                        &lt;p&gt;Debit : &lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+                                        &lt;p&gt;Balance : &lt;span&gt;$150.00&lt;/span&gt;&lt;/p&gt;
+                                      &lt;/div&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                            
+                                
+                            &lt;/tbody&gt;
+                            
+                            &lt;/table&gt;
+
+                           
+                  </code>
+                </pre>
+              </div>
+            </div>
+            <div class="col-md-6 col-ls-6">
+
+              <h5>CSS Code</h5>
+              <div class="css-box">
+                <pre>
+                  <code>
+                    
+                    .accordion &#123;
+                      width:100%;
+                      border:1px solid #ececec;
+                      a &#123;text-decoration: none;&#125;
+                      .header&#123;
+                          padding:15px;
+                          background:#f7f7f7;
+                          color:#000;
+                          &#125;
+                      .body&#123;
+                          padding:25px 15px 15px;
+                      &#125;
+                    &#125;
+                  
+                  
+                  .table tr &#123;
+                      cursor: pointer;
+                      &#125;
+                  .table&#123;
+                    background-color: #fff !important;
+                    &#125;
+                  .hedding h1&#123;
+                    color:#fff;
+                    font-size:25px;
+                    &#125;
+                  .main-section&#123;
+                    margin-top: 120px;
+                    &#125;
+                  .hiddenRow &#123;
+                      padding: 0 4px !important;
+                      background-color: #eeeeee;
+                      font-size: 13px;
+                      &#125;
+                  .accordian-body span&#123;
+                    color:#a2a2a2 !important;
+                    &#125;
+                  
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+      </tab>
+      <tab heading="Instruction">
+          <h4>UI Breadcrumb 2.2</h4>
+          <p>Breadcrumbs (or breadcrumb trail) is a secondary navigation system to show the path that the user followed to reach the current screen. 
+            Breadcrumbs are intended to supplement other navigational components, such as a global navigation bar that stretches across the top of every page or a local navigation bar that is often found on the left-hand side. Breadcrumbs augment but do not replace those main forms of navigation.
+            Sample Design</p>
+
+            <h5>Sample Design</h5>
+
+            <img src="assets/instruction/accordion/accordion-a-details.png" style="width: 650px; height: auto;;" alt="Accordion details">
+            <br><br>
+
+
+            <table class="table table-bordered" style="width: auto;">
+              <thead>
+              <tr style="width: 100%;">
+                <th>
+                  Color usages for breadcrumb levels
+                </th>
+                </tr>
+            </thead>
+              <tbody>
+               <tr>
+                <td>Current Level</td>
+                <td>#9e9e9e</td>
+               </tr>
+               <tr>
+                <td>Previous Levels</td>
+                <td>#004ea8</td>
+               </tr>
+              </tbody>
+            </table>
+      </tab>
+      <tab heading="Example">
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </tab>
+    </tabset>
+  </div><!--/.col-->
+  </div>

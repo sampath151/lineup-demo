@@ -1,0 +1,1077 @@
+
+
+form{
+  span{ color:#F00;}
+}
+
+
+
+
+.radio {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 24px;
+  width:100%;
+  height:30px;
+  
+  & input {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 200px;
+    height: 25px;
+    opacity: 0;
+      z-index: 0;
+  }
+  
+  & label {
+      display: block;
+      padding: 0 0 0 24px;
+      cursor: pointer;
+      font-size: 1rem!important;
+      
+      &:before {
+          content: '';
+          position: absolute;
+          top: 4px;
+          left: 0;
+          width: 16px;
+          height: 16px;
+          background-color: transparent;
+          border: 2px solid $border-color;
+          border-radius: 14px;
+          z-index: 1;
+          transition: border-color 0.28s cubic-bezier(.4, 0, .2, 1);
+      }
+       
+      &:after {
+          content: '';
+          position: absolute;
+          top: 8px;
+          left: 4px;
+          width: 8px;
+          height: 8px;
+          background-color: $primary;
+          border-radius: 50%;
+          z-index: 2;
+          transform: scale(0, 0);
+          transition: transform 0.28s cubic-bezier(.4, 0, .2, 1);
+      }
+  }
+  
+  & input:checked + &__label {
+      &:before {
+          border-color: $primary;
+      }
+      
+      &:after {
+          transform: scale(1, 1);
+      }
+  }
+}
+
+
+
+.material-textfield {
+    position: relative;  
+    margin:5px 0;
+    width:100%;
+    // min-width: 250px;
+    // max-width: 350px;
+
+    
+  }
+
+.inputDisabled{
+    label{
+    color:#ababab;
+    }
+}
+
+  // ------------- checkbox area
+
+  .form-checkbox-area{
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      input{
+          width:auto;
+          float: left;
+          margin-right: 15px;
+          margin-top:2px;
+      }
+  }
+
+  // ------------- checkbox area close
+
+
+
+
+  // ------------- Input with error
+  .errorInput{
+    .error-icon{
+        float: right!important;
+        margin: 0 0 0 10px;
+        position: relative;
+        top: 38px;
+        right:20px;
+        fill:red;
+    }
+
+label {
+font-size: 1rem;
+width: 64%;
+outline: none;
+// border: 1px solid #8f9ba6;
+border-radius: 5px;
+padding: 1.4rem 2.4rem 0.5rem;
+color: gray;
+transition: 0.1s ease-out;
+position: absolute;
+font-size: 1rem;
+left: 5px;
+top: 69%;
+transform: translateY(-50%);
+background-color: white;
+// width:75%;
+color: #df5353;
+// padding: 3px 0.3rem;
+padding:3px 0;
+margin: 0 0.5rem;
+transition: .1s ease-out;
+// width:55%;
+transform-origin: left top;
+pointer-events: none;
+}
+input {
+font-size: 1rem;
+width: 100%;
+outline: none;
+border: 1px solid $danger;
+border-radius: 5px;  
+padding: 1.4rem 0.7rem 0.5rem ;
+color: #df5353;
+transition: 0.1s ease-out;
+
+
+}
+input:focus {
+border-color:$primary;  
+}
+input:focus + label {
+color: $primary;
+top: 36px;
+width:auto;
+font-size: 0.8rem;
+transform: translateY(-50%) scale(.9);
+}
+input:not(:placeholder-shown) + label {
+top: 36px;
+transform: translateY(-50%) scale(.9);
+width:auto;
+font-size: 0.8rem;
+color: $danger;
+transition: 0.2s ease all;
+
+}
+
+option{
+  background: chocolate;
+  line-height: 23px;
+}
+
+
+
+}
+
+.error-txt{
+    color:$danger;
+}
+
+  // ------------- Input with error Close
+
+// ------------- Input with icon
+
+
+.iconInput{
+    .icon{
+        float: left;
+        margin: 0 0 0 10px;
+        position: relative;
+        top: 38px;
+    }
+
+label {
+font-size: 1rem;
+width: 100%;
+outline: none;
+// border: 1px solid #8f9ba6;
+border-radius: 5px;
+padding: 1.4rem 2.4rem 0.5rem;
+color: gray;
+transition: 0.1s ease-out;
+position: absolute;
+font-size: 1rem;
+left: 30px;
+top: 67%;
+transform: translateY(-50%);
+background-color: white;
+width:75%;
+color: #3c3c3c;
+// padding: 3px 0.3rem;
+padding:3px 0;
+margin: 0 0.5rem;
+transition: .1s ease-out;
+// width:55%;
+transform-origin: left top;
+pointer-events: none;
+}
+input {
+font-size: 1rem;
+width: 100%;
+outline: none;
+border: 1px solid $gray-500;
+border-radius: 5px;  
+padding: 1.4rem 0.7rem 0.5rem 37px;
+color: gray;
+transition: 0.1s ease-out;
+
+
+}
+input:focus {
+border-color:$primary;  
+}
+input:focus + label {
+color: $primary;
+top: 36px;
+width:auto;
+font-size: 0.8rem;
+transform: translateY(-50%) scale(.9);
+}
+input:not(:placeholder-shown) + label {
+top: 36px;
+transform: translateY(-50%) scale(.9);
+width:auto;
+font-size: 0.8rem;
+color: $primary;
+transition: 0.2s ease all;
+
+}
+
+option{
+  background: chocolate;
+  line-height: 23px;
+}
+
+
+}
+
+
+
+// ------------- Input with icon clpse
+
+
+label {
+    position: absolute;
+    font-size: 1rem;
+    left: 5px;
+    top: 60%;
+    transform: translateY(-50%);
+    background-color: white;
+    width:88%;
+    color: #3c3c3c;
+    // padding: 3px 0.3rem;
+    padding:1px 0;
+    margin: 0 0.5rem;
+    transition: .1s ease-out;
+    // width:55%;
+    transform-origin: left top;
+    pointer-events: none;
+  }
+  input {
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid $gray-500;
+    border-radius: 5px;  
+    padding: 1.3rem 0.7rem 0.5rem;
+    color: gray;
+    transition: 0.1s ease-out;
+    
+   
+  }
+  input:focus {
+    border-color:$primary;  
+  }
+  input:focus + label {
+    color: $primary;
+    top: 30%;
+    width:auto;
+    font-size: 0.8rem;
+    transform: translateY(-50%) scale(.9);
+  }
+  input:not(:placeholder-shown) + label {
+    top: 28%;
+    transform: translateY(-50%) scale(.9);
+    width:auto;
+    font-size: 0.8rem;
+    color: $primary;
+    padding:1px 0;
+	transition: 0.2s ease all;
+
+  }
+
+  option{
+      background: #FFF;
+      line-height: 23px;
+  }
+
+
+
+  textarea {
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid $gray-500;
+    border-radius: 5px;  
+    padding: 1.4rem 0.7rem 0.5rem;
+    color: gray;
+    transition: 0.1s ease-out;
+  }
+  textarea:focus {
+    border-color:$primary;  
+  }
+  textarea:focus + label {
+    color: $primary;
+    top: 30%;
+    width:auto;
+    font-size: 0.8rem;
+    transform: translateY(-50%) scale(.9);
+  }
+  textarea:not(:placeholder-shown) + label {
+    top: 30%;
+    transform: translateY(-50%) scale(.9);
+    width:auto;
+    font-size: 0.8rem;
+    color: $primary;
+	transition: 0.2s ease all;
+
+  }
+
+
+
+
+
+  .pure-material-checkbox {
+    z-index: 0;
+    position: relative;
+    display: inline-block;
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Input */
+.pure-material-checkbox > input textarea{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: -1;
+    position: absolute;
+    left: -10px;
+    top: -8px;
+    display: block;
+    margin: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    box-shadow: none;
+    outline: none;
+    opacity: 0;
+    transform: scale(1);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+/* Span */
+.pure-material-checkbox > span {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Box */
+.pure-material-checkbox > span::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 3px 11px 3px 1px;
+    border: solid 2px; /* Safari */
+    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+/* Checkmark */
+.pure-material-checkbox > span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    width: 10px;
+    height: 5px;
+    border: solid 2px transparent;
+    border-right: none;
+    border-top: none;
+    transform: translate(3px, 4px) rotate(-45deg);
+}
+
+/* Checked, Indeterminate */
+.pure-material-checkbox > input:checked,
+.pure-material-checkbox > input:indeterminate {
+    background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.pure-material-checkbox > input:checked + span::before,
+.pure-material-checkbox > input:indeterminate + span::before {
+    border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+    background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.pure-material-checkbox > input:checked + span::after,
+.pure-material-checkbox > input:indeterminate + span::after {
+    border-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+}
+
+.pure-material-checkbox > input:indeterminate + span::after {
+    border-left: none;
+    transform: translate(4px, 3px);
+}
+
+/* Hover, Focus */
+.pure-material-checkbox:hover > input {
+    opacity: 0.04;
+}
+
+.pure-material-checkbox > input:focus {
+    opacity: 0.12;
+}
+
+.pure-material-checkbox:hover > input:focus {
+    opacity: 0.16;
+}
+
+/* Active */
+.pure-material-checkbox > input:active {
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 0s, opacity 0s;
+}
+
+.pure-material-checkbox > input:active + span::before {
+    border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.pure-material-checkbox > input:checked:active + span::before {
+    border-color: transparent;
+    background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+}
+
+/* Disabled */
+.pure-material-checkbox > input:disabled {
+    opacity: 0;
+}
+
+.pure-material-checkbox > input:disabled + span {
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+    cursor: initial;
+}
+
+.pure-material-checkbox > input:disabled + span::before {
+    border-color: currentColor;
+}
+
+.pure-material-checkbox > input:checked:disabled + span::before,
+.pure-material-checkbox > input:indeterminate:disabled + span::before {
+    border-color: transparent;
+    background-color: currentColor;
+}
+
+
+
+  
+//   .input-field label {
+//     color: #000;
+//   }
+  
+//   .input-field input[type=text]:focus + label {
+//     color: #000;
+//   }
+  
+//   .input-field input[type=text]:focus {
+//     border-bottom: 1px solid #000;
+//     box-shadow: 0 1px 0 0 #000;
+//   }
+  
+//   .input-field input[type=text].valid {
+//     border-bottom: 1px solid #000;
+//     box-shadow: 0 1px 0 0 #000;
+//   }
+  
+//   .input-field input[type=text].invalid {
+//     border-bottom: 1px solid #000;
+//     box-shadow: 0 1px 0 0 #000;
+//   }
+  
+//   .input-field .prefix.active {
+//     color: #000;
+//   }
+
+
+
+.dark-mode{
+    
+
+
+form{
+    span{ color:#F00;}
+  }
+  
+  
+  
+  
+  .radio {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 10px;
+    font-size: 16px;
+    line-height: 24px;
+    width:100%;
+    height:30px;
+    
+    & input {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 200px;
+      height: 25px;
+      opacity: 0;
+        z-index: 0;
+    }
+    
+    & label {
+        display: block;
+        padding: 0 0 0 24px;
+        cursor: pointer;
+        font-size: 1rem!important;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-color: transparent;
+            border: 2px solid $border-color;
+            border-radius: 14px;
+            z-index: 1;
+            transition: border-color 0.28s cubic-bezier(.4, 0, .2, 1);
+        }
+         
+        &:after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 4px;
+            width: 8px;
+            height: 8px;
+            background-color: $primary;
+            border-radius: 50%;
+            z-index: 2;
+            transform: scale(0, 0);
+            transition: transform 0.28s cubic-bezier(.4, 0, .2, 1);
+        }
+    }
+    
+    & input:checked + &__label {
+        &:before {
+            border-color: $primary;
+        }
+        
+        &:after {
+            transform: scale(1, 1);
+        }
+    }
+  }
+  
+  
+  
+  .material-textfield {
+      position: relative;  
+      margin:5px 0;
+      // min-width: 250px;
+      // max-width: 350px;
+  
+      
+    }
+  
+  .inputDisabled{
+      label{
+      color:#ababab;
+      }
+  }
+  
+    // ------------- checkbox area
+  
+    .form-checkbox-area{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        input{
+            width:auto;
+            float: left;
+            margin-right: 15px;
+            margin-top:2px;
+        }
+    }
+  
+    // ------------- checkbox area close
+  
+  
+  
+  
+    // ------------- Input with error
+    .errorInput{
+      .error-icon{
+          float: right!important;
+          margin: 0 0 0 10px;
+          position: relative;
+          top: 38px;
+          right:20px;
+          fill:red;
+      }
+  
+  label {
+  font-size: 1rem;
+  width: 64%;
+  outline: none;
+  // border: 1px solid #8f9ba6;
+  border-radius: 5px;
+  padding: 1.4rem 2.4rem 0.5rem;
+  color: gray;
+  transition: 0.1s ease-out;
+  position: absolute;
+  font-size: 1rem;
+  left: 5px;
+  top: 69%;
+  transform: translateY(-50%);
+  background-color: #292929;
+  // width:75%;
+  color: #df5353;
+  // padding: 3px 0.3rem;
+  padding:3px 0;
+  margin: 0 0.5rem;
+  transition: .1s ease-out;
+  // width:55%;
+  transform-origin: left top;
+  pointer-events: none;
+  }
+  input {
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  border: 1px solid $danger;
+  border-radius: 5px;  
+  padding: 1.4rem 0.7rem 0.5rem ;
+  color: #df5353;
+  transition: 0.1s ease-out;
+  
+  
+  }
+  input:focus {
+  border-color:$primary;  
+  }
+  input:focus + label {
+  color: #292929;
+  top: 36px;
+  width:auto;
+  font-size: 0.8rem;
+  transform: translateY(-50%) scale(.9);
+  }
+  input:not(:placeholder-shown) + label {
+  top: 36px;
+  transform: translateY(-50%) scale(.9);
+  width:auto;
+  font-size: 0.8rem;
+  color: $danger;
+  transition: 0.2s ease all;
+  
+  }
+  
+  option{
+    background: chocolate;
+    line-height: 23px;
+  }
+  
+  
+  
+  }
+  
+  .error-txt{
+      color:$danger;
+  }
+  
+    // ------------- Input with error Close
+  
+  // ------------- Input with icon
+  
+  
+  .iconInput{
+      .icon{
+          float: left;
+          margin: 0 0 0 10px;
+          position: relative;
+          top: 38px;
+      }
+  
+  label {
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  // border: 1px solid #8f9ba6;
+  border-radius: 5px;
+  padding: 1.4rem 2.4rem 0.5rem;
+  color: gray;
+  transition: 0.1s ease-out;
+  position: absolute;
+  font-size: 1rem;
+  left: 30px;
+  top: 67%;
+  transform: translateY(-50%);
+  background-color: #292929;
+  width:75%;
+  color: #3c3c3c;
+  // padding: 3px 0.3rem;
+  padding:3px 0;
+  margin: 0 0.5rem;
+  transition: .1s ease-out;
+  // width:55%;
+  transform-origin: left top;
+  pointer-events: none;
+  }
+  input {
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  border: 1px solid $gray-500;
+  border-radius: 5px;  
+  padding: 1.4rem 0.7rem 0.5rem 37px;
+  color: gray;
+  transition: 0.1s ease-out;
+  
+  
+  }
+  input:focus {
+  border-color:$primary;  
+  }
+  input:focus + label {
+  color: #292929;
+  top: 36px;
+  width:auto;
+  font-size: 0.8rem;
+  transform: translateY(-50%) scale(.9);
+  }
+  input:not(:placeholder-shown) + label {
+  top: 36px;
+  transform: translateY(-50%) scale(.9);
+  width:auto;
+  font-size: 0.8rem;
+  color: #292929;
+  transition: 0.2s ease all;
+  
+  }
+  
+  option{
+    background: chocolate;
+    line-height: 23px;
+  }
+  
+  
+  }
+  
+  
+  
+  // ------------- Input with icon clpse
+  
+  
+  label {
+      position: absolute;
+      font-size: 1rem;
+      left: 5px;
+      top: 55%;
+      transform: translateY(-50%);
+      background-color: #292929;
+      width:88%;
+      color: #3c3c3c;
+      // padding: 3px 0.3rem;
+      padding:3px 0;
+      margin: 0 0.5rem;
+      transition: .1s ease-out;
+      // width:55%;
+      transform-origin: left top;
+      pointer-events: none;
+    }
+    input {
+      font-size: 1rem;
+      width: 100%;
+      outline: none;
+      border: 1px solid $gray-500;
+      border-radius: 5px;  
+      padding: 1.4rem 0.7rem 0.5rem;
+      color: gray;
+      transition: 0.1s ease-out;
+      
+     
+    }
+    input:focus {
+      border-color:$primary;  
+    }
+    input:focus + label {
+      color: #7a7a7a;;
+      top: 30%;
+      width:auto;
+      font-size: 0.8rem;
+      transform: translateY(-50%) scale(.9);
+    }
+    input:not(:placeholder-shown) + label {
+      top: 30%;
+      transform: translateY(-50%) scale(.9);
+      width:auto;
+      font-size: 0.8rem;
+      color: #7a7a7a;;
+      transition: 0.2s ease all;
+  
+    }
+  
+    option{
+        background: chocolate;
+        line-height: 23px;
+    }
+  
+  
+  
+    textarea {
+      font-size: 1rem;
+      width: 100%;
+      outline: none;
+      border: 1px solid $gray-500;
+      border-radius: 5px;  
+      padding: 1.4rem 0.7rem 0.5rem;
+      color: gray;
+      transition: 0.1s ease-out;
+    }
+    textarea:focus {
+      border-color:$primary;  
+    }
+    textarea:focus + label {
+      color: #7a7a7a;
+      top: 30%;
+      width:auto;
+      font-size: 0.8rem;
+      transform: translateY(-50%) scale(.9);
+    }
+    textarea:not(:placeholder-shown) + label {
+      top: 30%;
+      transform: translateY(-50%) scale(.9);
+      width:auto;
+      font-size: 0.8rem;
+      color: #7a7a7a;
+      transition: 0.2s ease all;
+  
+    }
+  
+  
+  
+  
+  
+    .pure-material-checkbox {
+      z-index: 0;
+      position: relative;
+      display: inline-block;
+      color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+      font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+      font-size: 16px;
+      line-height: 1.5;
+  }
+  
+  /* Input */
+  .pure-material-checkbox > input textarea{
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      z-index: -1;
+      position: absolute;
+      left: -10px;
+      top: -8px;
+      display: block;
+      margin: 0;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+      box-shadow: none;
+      outline: none;
+      opacity: 0;
+      transform: scale(1);
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.2s;
+  }
+  
+  /* Span */
+  .pure-material-checkbox > span {
+      display: inline-block;
+      width: 100%;
+      cursor: pointer;
+  }
+  
+  /* Box */
+  .pure-material-checkbox > span::before {
+      content: "";
+      display: inline-block;
+      box-sizing: border-box;
+      margin: 3px 11px 3px 1px;
+      border: solid 2px; /* Safari */
+      border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+      border-radius: 2px;
+      width: 18px;
+      height: 18px;
+      vertical-align: top;
+      transition: border-color 0.2s, background-color 0.2s;
+  }
+  
+  /* Checkmark */
+  .pure-material-checkbox > span::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 1px;
+      width: 10px;
+      height: 5px;
+      border: solid 2px transparent;
+      border-right: none;
+      border-top: none;
+      transform: translate(3px, 4px) rotate(-45deg);
+  }
+  
+  /* Checked, Indeterminate */
+  .pure-material-checkbox > input:checked,
+  .pure-material-checkbox > input:indeterminate {
+      background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  }
+  
+  .pure-material-checkbox > input:checked + span::before,
+  .pure-material-checkbox > input:indeterminate + span::before {
+      border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+      background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  }
+  
+  .pure-material-checkbox > input:checked + span::after,
+  .pure-material-checkbox > input:indeterminate + span::after {
+      border-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  }
+  
+  .pure-material-checkbox > input:indeterminate + span::after {
+      border-left: none;
+      transform: translate(4px, 3px);
+  }
+  
+  /* Hover, Focus */
+  .pure-material-checkbox:hover > input {
+      opacity: 0.04;
+  }
+  
+  .pure-material-checkbox > input:focus {
+      opacity: 0.12;
+  }
+  
+  .pure-material-checkbox:hover > input:focus {
+      opacity: 0.16;
+  }
+  
+  /* Active */
+  .pure-material-checkbox > input:active {
+      opacity: 1;
+      transform: scale(0);
+      transition: transform 0s, opacity 0s;
+  }
+  
+  .pure-material-checkbox > input:active + span::before {
+      border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  }
+  
+  .pure-material-checkbox > input:checked:active + span::before {
+      border-color: transparent;
+      background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  }
+  
+  /* Disabled */
+  .pure-material-checkbox > input:disabled {
+      opacity: 0;
+  }
+  
+  .pure-material-checkbox > input:disabled + span {
+      color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+      cursor: initial;
+  }
+  
+  .pure-material-checkbox > input:disabled + span::before {
+      border-color: currentColor;
+  }
+  
+  .pure-material-checkbox > input:checked:disabled + span::before,
+  .pure-material-checkbox > input:indeterminate:disabled + span::before {
+      border-color: transparent;
+      background-color: currentColor;
+  }
+  
+  
+  
+    
+  //   .input-field label {
+  //     color: #000;
+  //   }
+    
+  //   .input-field input[type=text]:focus + label {
+  //     color: #000;
+  //   }
+    
+  //   .input-field input[type=text]:focus {
+  //     border-bottom: 1px solid #000;
+  //     box-shadow: 0 1px 0 0 #000;
+  //   }
+    
+  //   .input-field input[type=text].valid {
+  //     border-bottom: 1px solid #000;
+  //     box-shadow: 0 1px 0 0 #000;
+  //   }
+    
+  //   .input-field input[type=text].invalid {
+  //     border-bottom: 1px solid #000;
+  //     box-shadow: 0 1px 0 0 #000;
+  //   }
+    
+  //   .input-field .prefix.active {
+  //     color: #000;
+  //   }
+  
+}

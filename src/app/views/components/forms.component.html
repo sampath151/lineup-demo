@@ -1,0 +1,836 @@
+
+<div class="container-fluid">
+  <div>
+    <img src="assets/form-element-banner.png" style="width: 100%;height:auto;" alt="">
+  </div>
+  
+
+
+
+    <div class="card " style="height: auto">
+      <div class="col-md-12 mb-12 ">
+        <!-- Nav tabs -->
+        <tabset>
+          <tab heading="Example">
+            <div class="row" style="height: 70px;">
+               <div class="dropdown">
+                <button class="btn btn-defualt-outline dropdown-toggle"  type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-haspopup="true" aria-approveed="false">
+                  Select Button Type
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item"  (click)="onChange('inputField')" >Input Field</a>
+                  <a class="dropdown-item" (click)="onChange('radioButton')"  >Radio Button</a>
+                  <a class="dropdown-item" (click)="onChange('checkBox')" >Check Box</a>
+                  <a class="dropdown-item" (click)="onChange('select')"  >Select</a>
+                  <!-- <a class="dropdown-item" (click)="onChange($event)" value="CMW">Conversational Model Window</a>
+                  <a class="dropdown-item" (click)="onChange($event)" value="MMW">Mobile Model Window</a> -->
+                </div>
+              </div> 
+            
+            </div>
+            <div style="clear:both;"></div>
+
+         
+            <div class="row component-tabs" *ngIf="selectedType =='inputField'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+
+                    <tab heading="Default" class=""> 
+                      <!-- <h3>Default Model Window</h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+                        
+                        <div class="card-body">
+                          <div class="row align-items-center">
+                            <div class="material-textfield">
+                              <input placeholder="First Name " type="text">
+                              <label>First Name</label>
+                            </div>
+                            
+                          </div>
+                         
+                        </div>
+
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_I"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                            
+                            <pre>
+                              <code [innerHTML]="css_code_F_I"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                       
+                      </div>
+                    </tab>
+                    <tab heading="With Leading Icon" class=""> 
+                      <!-- <h3>Default Model Window</h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+
+                        <div class="card-body">
+                          <div class="row align-items-center">
+                            
+                            <div class="material-textfield iconInput">
+                              <svg class="icon">
+                                <use [attr.xlink:href]="'#approve'" />
+                              </svg>
+                              <input placeholder="First Name " type="text">
+                              <label>First Name</label>
+                            </div>
+
+                           
+                          </div>
+                         
+                        </div>
+                        
+                       
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_WI"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_F_WI"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    
+                    <tab heading="Error"> 
+                      <!-- <h3>Default Model Window 2 </h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+                        <div class="card-body">
+                          <div class="row align-items-center">
+                            <div class="material-textfield errorInput">
+                              <svg class="icon error-icon">
+                                <use [attr.xlink:href]="'#lock'" />
+                              </svg>
+                             
+                              <input placeholder="First Name " type="text">
+                              <label>First Name</label>
+                              
+                            </div>
+                           
+                          </div>
+                          <div class="error-txt">
+                            <p>Your value is incorrect!</p>
+                          </div>
+
+                         
+                        </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_EE"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_F_EE"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Multi-Level Inputs"> 
+                      <!-- <h3>Default Model Window 3</h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+                        <div class="card-body">
+                          <div class="row align-items-center">
+                            
+                            Coming Soon...
+                           
+                          </div>
+                         
+                        </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_B_FW"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_B_FW"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="Disabled"> 
+                      <!-- <h3>Default Model Window 4</h3> -->
+                      <div class="container component-view col-md-12 col-lg-12">
+                        <div class="row">
+                            
+                          <div class="material-textfield inputDisabled ">
+                            <input   disabled="disabled" placeholder="First Name " type="text">
+                            <label>First Name</label>
+                          </div>
+
+                         
+                         
+                        </div>
+                        
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_ID"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_F_ID"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="row component-tabs" *ngIf="selectedType =='radioButton'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+                    <tab heading="Normal"> 
+                      <!-- <h3>Fluid Model Window</h3> -->
+                      <div class="container component-view">
+                        <div class="row">
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" name="radio" class="radio__input" checked>
+                              <label class="radio__label">Radio 1</label>
+                          </div>
+                          </div>
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" name="radio" class="radio__input">
+                              <label class="radio__label">Radio 2</label>
+                          </div>
+                          </div>
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" name="radio" class="radio__input">
+                              <label class="radio__label">Radio </label>
+                          </div>
+                          </div>
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" name="radio" class="radio__input">
+                              <label class="radio__label">Radio </label>
+                          </div>
+                          </div>
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" name="radio" class="radio__input">
+                              <label class="radio__label">Radio </label>
+                          </div>
+                          </div>
+                        </div>
+      
+                        
+
+                         
+                         
+                         
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_RB"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_F_RB"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="disabled"> 
+                      <!-- <h3>Fluid Model Window 2</h3> -->
+                      <div class="container component-view">
+                        <div class="row">
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" disabled name="radio" class="radio__input" >
+                              <label class="radio__label">Radio 1</label>
+                          </div>
+                          </div>
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" disabled name="radio" class="radio__input">
+                              <label class="radio__label">Radio 2</label>
+                          </div>
+                          </div>
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" disabled name="radio" class="radio__input">
+                              <label class="radio__label">Radio </label>
+                          </div>
+                          </div>
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" disabled name="radio" class="radio__input">
+                              <label class="radio__label">Radio </label>
+                          </div>
+                          </div>
+                          <div class="col-md-12 col-ls-12">
+                            <div class="radio">
+                              <input type="radio" disabled name="radio" class="radio__input">
+                              <label class="radio__label">Radio </label>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_RB_D"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_F_RB_D"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    
+                    
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="row component-tabs" *ngIf="selectedType =='checkBox'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+                    <tab heading="Normal"> 
+                      <!-- <h3>Fluid Model Window</h3> -->
+                      <div class="container component-view">
+                        
+                          <div class="row">
+                          <div class="material-textfield">
+                            <div class="form-checkbox-area">
+                              <input class="form-check-input" type="checkbox"  id="inlineCheckbox1" value="option1"> Option A
+                            </div>
+                          </div>
+                          </div>
+                          <div class="row">
+                            <div class="material-textfield  ">
+                              <div class="form-checkbox-area">
+                                <input class="form-check-input" type="checkbox"  id="inlineCheckbox1" value="option1"> Option B
+                              </div>
+                            </div>
+                            </div>
+                          
+                            <div class="row">
+                              <div class="material-textfield  ">
+                                <div class="form-checkbox-area">
+                                  <input class="form-check-input" type="checkbox"  id="inlineCheckbox1" value="option1"> Option C
+                                </div>
+                              </div>
+                              </div>
+                          
+                              <div class="row">
+                                <div class="material-textfield  ">
+                                  <div class="form-checkbox-area">
+                                    <input class="form-check-input" type="checkbox"  id="inlineCheckbox1" value="option1"> Option D
+                                  </div>
+                                </div>
+                                </div>
+                                
+                         
+                          
+                          
+                        
+
+                         
+                         
+                         
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_CB"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_F_CB"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="disabled"> 
+                      <!-- <h3>Fluid Model Window 2</h3> -->
+                      <div class="container component-view">
+                       
+                        <div class="row">
+                          <div class="material-textfield">
+                            <div class="form-checkbox-area">
+                              <input class="form-check-input" type="checkbox" disabled   id="inlineCheckbox1" value="option1"> Option A
+                            </div>
+                          </div>
+                          </div>
+                          <div class="row">
+                            <div class="material-textfield  ">
+                              <div class="form-checkbox-area">
+                                <input class="form-check-input" type="checkbox"  disabled id="inlineCheckbox1" value="option1"> Option B
+                              </div>
+                            </div>
+                            </div>
+                          
+                            <div class="row">
+                              <div class="material-textfield  ">
+                                <div class="form-checkbox-area">
+                                  <input class="form-check-input" type="checkbox" disabled id="inlineCheckbox1" value="option1"> Option C
+                                </div>
+                              </div>
+                              </div>
+                          
+                              <div class="row">
+                                <div class="material-textfield  ">
+                                  <div class="form-checkbox-area">
+                                    <input class="form-check-input" type="checkbox" disabled id="inlineCheckbox1" value="option1"> Option D
+                                  </div>
+                                </div>
+                                </div>
+                                
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_CB_D"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_F_CB_D"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    
+                    
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="row component-tabs" *ngIf="selectedType =='select'">
+              <div class="component-area-bg">
+                <div class="row">
+                  <tabset>
+                    <tab heading="Normal"> 
+                      <!-- <h3>Fluid Model Window</h3> -->
+                      <div class="container component-view">
+                        <div class="row">
+                          
+                          <div class="material-textfield col-lg-3">
+                            <div class="select">
+                              <select class="select-text select-dropdown" required>
+                                <option value="" disabled selected></option>
+                                <option value="0">Please select</option>
+                                <option value="1">Option #1</option>
+                                <option value="2">Option #2</option>
+                                <option value="3">Option #3</option>
+                              </select>
+                              <span class="select-highlight"></span>
+                              <span class="select-bar"></span>
+                              <label class="select-label">Select</label>
+                            </div>
+                            </div>
+                        </div>
+                        
+
+                         
+                         
+                         
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_SB"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_F_SB"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    <tab heading="disabled"> 
+                      <!-- <h3>Fluid Model Window 2</h3> -->
+                      <div class="container component-view">
+                        <div class="material-textfield inputDisabled col-lg-3">
+                          <div class="select">
+                            <select class="select-text select-dropdown" disabled required>
+                              <option value="" disabled selected></option>
+                              <option value="0">Please select</option>
+                              <option value="1">Option #1</option>
+                              <option value="2">Option #2</option>
+                              <option value="3">Option #3</option>
+                            </select>
+                            <span class="select-highlight"></span>
+                            <span class="select-bar"></span>
+                            <label class="select-label">Select</label>
+                          </div>
+                          </div>
+                      </div>
+
+                      <div class="fotter">
+                        <tabset>
+                          <tab heading="HTML"> 
+                            <div class="more-arrow">
+                              <div class="container">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                              </div>
+                            </div>
+                            <pre>
+                              <code [innerHTML]="html_code_F_SB_D"></code>
+                            </pre>  
+                          </tab>
+                          <tab heading="SCSS"> 
+                            
+                           
+                            <pre>
+                              <code [innerHTML]="css_code_F_SB_D"></code>
+                            </pre>
+                          </tab>
+                          <tab heading="Integration"> 
+                            <pre>
+                              <code [innerHTML]="java_codeappModuleTs"></code>
+                            </pre>
+                          </tab>
+                         </tabset>
+                      </div>
+                    </tab>
+                    
+                    
+                   </tabset>
+                </div>
+
+              </div>
+
+            </div>
+           
+
+           
+
+            
+          </tab>
+          <tab heading="Development">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>Forms Integration</h3>
+                  <!-- content from https://www.itsolutionstuff.com/post/angular-11-bootstrap-4-modal-exampleexample.html -->
+                  <h3>Angular 11 Bootstrap 4 Forms </h3>
+
+                  <h5>Install Bootstrap 4</h5>
+                  
+                 <div class="codebox">
+                  <p>npm install bootstrap --save</p>
+                 </div>
+
+                 <p>Now, we need to include bootstrap css like "node_modules/bootstrap/dist/css/bootstrap.min.css", so let's add it on angular.json file.</p>
+
+                 <h5>angular.json</h5>
+                 <div class="codebox">
+                   <p>..... <br>
+                    "styles": [<br>
+                      "node_modules/bootstrap/dist/css/bootstrap.min.css",<br>
+                      "src/styles.css"<br>
+                    ],<br>
+                .....</p>
+                 </div>
+                 <h5> Install Ng Bootstrap</h5>
+                 <div class="codebox">
+                   <p>npm install --save @ng-bootstrap/ng-bootstrap</p>
+                 </div>
+
+                 <h5>Import Module</h5>
+                 <p>In this step, we need to import NgbModule to app.module.ts file. so let's import it as like bellow:</p>
+                 <h5>src/app/app.module.ts</h5>
+
+                 <div class="codebox">
+                  <pre>
+                    <code [innerHTML]="java_codeappModuleTs"></code>
+                  </pre>
+                   
+                 </div>
+                 <p>Now here, we will updated our html file. we will create simple bootstrap model template file. <br> <br>
+
+                  so let's put bellow code:</p>
+                  <h5>src/app/app.component.html</h5>
+
+                  <div class="codebox">
+                    <pre>
+                      <code [innerHTML]="html_code_B_Out"></code>
+                    </pre>
+                     
+                   </div>
+                 
+
+                </div>
+    
+                <div class="divider-50"></div>
+                
+              </div>
+    
+          </tab>
+         
+          <tab heading="Usage-Instructions">
+
+            <div class="row">
+              <div class="col-md-4">
+               <img src="assets/img/forms/img-01.png" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="assets/img/forms/img-02.png" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="assets/img/forms/img-03.png" alt="">
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-8">
+               <img src="assets/img/forms/img-04.png" alt="">
+              </div>
+             
+              <div class="col-md-4">
+                <img src="assets/img/forms/img-05.png" alt="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-8">
+               <img src="assets/img/forms/img-06.png" alt="">
+              </div>
+              <div class="col-md-4">
+                <img src="assets/img/forms/img-07.png" alt="">
+               </div>
+               <div class="col-md-12">
+                <img src="assets/img/forms/img-08.png" alt="">
+               </div>
+               <div class="col-md-12">
+                <img src="assets/img/forms/img-09.png" alt="">
+               </div>
+              
+            </div>
+
+
+           
+          </tab>
+        </tabset>
+      </div><!--/.col-->
+</div>
+
+
+
+
+<div class="animated fadeIn">
+
+
+  
+  
+  </div>
+  
+  
+  </div>
+
+
+  
