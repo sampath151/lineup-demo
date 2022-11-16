@@ -3,6 +3,7 @@ import { getStyle, hexToRgba } from '@asgui/asgui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@asgui/asgui-plugin-chartjs-custom-tooltips';
 
 @Component({
+  selector: 'dashboard',
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
